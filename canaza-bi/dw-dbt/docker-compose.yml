@@ -1,0 +1,16 @@
+name: canaza-bi-dbt
+
+services:
+  dbt:
+    build: .
+    container_name: canaza-dw-dbt
+    volumes:
+      - ./canaza_bi:/usr/app/canaza_bi
+      - ./.dbt:/root/.dbt
+    networks:
+      - canaza-bi-net
+
+networks:
+  canaza-bi-net:
+    external: true
+    name: canaza-bi-net

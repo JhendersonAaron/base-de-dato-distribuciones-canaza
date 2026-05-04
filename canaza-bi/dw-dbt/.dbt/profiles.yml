@@ -1,0 +1,12 @@
+canaza_bi:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: canaza-dw-pg
+      port: 5432
+      user: postgres
+      password: postgres
+      dbname: canaza_dw
+      schema: marts
+      threads: 1

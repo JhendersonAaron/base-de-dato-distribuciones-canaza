@@ -17,8 +17,25 @@ services:
     networks:
       - canaza-bi-net
 
+  postgres-canaza:
+    image: postgres:16
+    container_name: canaza-dw-pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: canaza_dw
+      TZ: America/Lima
+    ports:
+      - "15432:5432"
+    volumes:
+      - pg_canaza_data:/var/lib/postgresql/data
+    networks:
+      - canaza-bi-net
+
 volumes:
   mysql_canaza_data:
+  pg_canaza_data:
 
 networks:
   canaza-bi-net:
