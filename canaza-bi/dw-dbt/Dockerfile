@@ -1,12 +1,11 @@
 FROM python:3.11-slim
 
-RUN apt-get update && apt-get install -y \
-    gcc \
-    libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN pip install dbt-postgres==1.8.0
-
 WORKDIR /usr/app
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir dbt-core dbt-postgres
 
 CMD ["sleep", "infinity"]

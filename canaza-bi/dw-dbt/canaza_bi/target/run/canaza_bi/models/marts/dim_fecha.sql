@@ -2,25 +2,29 @@
   
     
 
-  create  table "canaza_dw"."marts_marts"."dim_fecha__dbt_tmp"
+  create  table "canaza_dw"."marts"."dim_fecha__dbt_tmp"
   
   
     as
   
   (
-    select
-    to_char(fecha_emision, 'YYYYMMDD')::int as fecha_key,
-    fecha_emision::date                     as fecha,
-    extract(day from fecha_emision)::int    as dia,
-    to_char(fecha_emision, 'Day')           as dia_semana_desc,
-    extract(month from fecha_emision)::int  as mes,
-    to_char(fecha_emision, 'Month')         as mes_desc,
-    extract(quarter from fecha_emision)::int as trimestre,
-    extract(year from fecha_emision)::int   as anio
-from (
-    select distinct fecha_emision::date as fecha_emision
-    from "canaza_dw"."marts_staging"."stg_comprobante"
-) fechas
-order by fecha_emision
+    with fechas as (
+    select distinct
+        fecha_emision::date as fecha
+    from "canaza_dw"."staging"."stg_comprobante"
+    where fecha_emision is not null
+)
+
+select
+    cast(to_char(fecha, 'YYYYMMDD') as bigint)  as fecha_key,
+    fecha,
+    extract(day from fecha)::int                 as dia,
+    extract(isodow from fecha)::int              as dia_semana_numero,
+    to_char(fecha, 'TMDay')                      as dia_semana_desc,
+    extract(month from fecha)::int               as mes_numero,
+    to_char(fecha, 'TMMonth')                    as mes_desc,
+    extract(quarter from fecha)::int             as trimestre,
+    extract(year from fecha)::int                as anio
+from fechas
   );
   

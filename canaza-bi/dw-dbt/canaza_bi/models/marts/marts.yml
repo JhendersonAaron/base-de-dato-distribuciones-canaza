@@ -1,0 +1,96 @@
+version: 2
+
+models:
+  - name: dim_entidad
+    columns:
+      - name: entidad_key
+        tests:
+          - not_null
+          - unique
+      - name: id_entidad
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_producto
+    columns:
+      - name: producto_key
+        tests:
+          - not_null
+          - unique
+      - name: id_producto
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_fecha
+    columns:
+      - name: fecha_key
+        tests:
+          - not_null
+          - unique
+      - name: fecha
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_tipo_cpe
+    columns:
+      - name: tipo_cpe_key
+        tests:
+          - not_null
+          - unique
+      - name: cod_tipo_cpe
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_ventas
+    columns:
+      - name: fecha_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_fecha')
+                field: fecha_key
+      - name: entidad_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_entidad')
+                field: entidad_key
+      - name: producto_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_producto')
+                field: producto_key
+      - name: tipo_cpe_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_tipo_cpe')
+                field: tipo_cpe_key
+      - name: id_comprobante
+        tests:
+          - not_null
+      - name: id_detalle
+        tests:
+          - not_null
+          - unique
+      - name: id_producto
+        tests:
+          - not_null
+      - name: cantidad
+        tests:
+          - not_null
+      - name: comprobante_count
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1]

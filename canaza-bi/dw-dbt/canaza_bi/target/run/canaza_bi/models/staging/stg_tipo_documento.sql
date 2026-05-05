@@ -1,5 +1,5 @@
 
-  create view "canaza_dw"."marts_staging"."stg_tipo_documento__dbt_tmp"
+  create view "canaza_dw"."staging"."stg_tipo_documento__dbt_tmp"
     
     
   as (

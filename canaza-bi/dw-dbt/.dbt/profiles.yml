@@ -4,9 +4,9 @@ canaza_bi:
     dev:
       type: postgres
       host: canaza-dw-pg
-      port: 5432
       user: postgres
       password: postgres
+      port: 5432
       dbname: canaza_dw
       schema: marts
       threads: 1

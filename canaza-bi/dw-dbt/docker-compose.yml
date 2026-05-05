@@ -5,10 +5,14 @@ services:
     build: .
     container_name: canaza-dw-dbt
     volumes:
-      - ./canaza_bi:/usr/app/canaza_bi
+      - .:/usr/app
       - ./.dbt:/root/.dbt
+    working_dir: /usr/app
+    command: sleep infinity
     networks:
       - canaza-bi-net
+    tty: true
+    stdin_open: true
 
 networks:
   canaza-bi-net:
