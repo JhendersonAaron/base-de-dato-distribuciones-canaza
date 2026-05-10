@@ -1,0 +1,34 @@
+Ventas Brutas = SUM(fact_ventas[venta_bruta])
+
+Ventas Netas = SUM(fact_ventas[venta_neta])
+
+Costo Total = SUM(fact_ventas[costo_total])
+
+Margen Bruto = SUM(fact_ventas[margen_bruto])
+
+Unidades Vendidas = SUM(fact_ventas[cantidad])
+
+Líneas de Venta = COUNTROWS(fact_ventas)
+
+Comprobantes = DISTINCTCOUNT(fact_ventas[id_comprobante])
+
+% Margen Bruto = DIVIDE([Margen Bruto], [Ventas Netas])
+
+Ticket Promedio = DIVIDE([Ventas Netas], [Comprobantes])
+
+Precio Promedio Neto = DIVIDE([Ventas Netas], [Unidades Vendidas])
+
+Participación Ventas Netas =
+DIVIDE(
+    [Ventas Netas],
+    CALCULATE([Ventas Netas], ALLSELECTED())
+)
+
+Ventas Netas Acumuladas =
+CALCULATE(
+    [Ventas Netas],
+    FILTER(
+        ALLSELECTED(dim_fecha[fecha]),
+        dim_fecha[fecha] <= MAX(dim_fecha[fecha])
+    )
+)
