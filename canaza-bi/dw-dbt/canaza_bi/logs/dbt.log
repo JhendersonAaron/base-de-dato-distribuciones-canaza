@@ -7489,3 +7489,2915 @@ having count(*) > 1
 [0m02:59:07.970796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7991cbd17910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7991cbd17f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7991d09cfa10>]}
 [0m02:59:07.972352 [debug] [MainThread]: Flushing usage events
 [0m02:59:08.656880 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:51:22.543529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3f015c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3f1c9810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3eef3790>]}
+
+
+============================== 21:51:22.552248 | 9bf4fd1f-c807-4517-bd04-351d0d3333c9 ==============================
+[0m21:51:22.552248 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:51:22.554420 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'debug': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'log_path': '/usr/app/canaza_bi/logs', 'use_colors': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'printer_width': '80', 'partial_parse': 'True', 'target_path': 'None', 'profiles_dir': '/root/.dbt', 'log_cache_events': 'False', 'version_check': 'True', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select staging', 'no_print': 'None', 'fail_fast': 'False', 'write_json': 'True'}
+[0m21:51:22.852959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3e555d10>]}
+[0m21:51:22.926744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c4201b3d0>]}
+[0m21:51:22.932764 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:51:23.068998 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m21:51:23.580384 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:51:23.582325 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:51:23.583449 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:51:23.590982 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.canaza_bi.intermediate
+[0m21:51:23.635833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3d564890>]}
+[0m21:51:23.840601 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/canaza_bi/target/manifest.json
+[0m21:51:23.862912 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/canaza_bi/target/semantic_manifest.json
+[0m21:51:23.895017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3d105f50>]}
+[0m21:51:23.896537 [info ] [MainThread]: Found 12 models, 33 data tests, 466 macros
+[0m21:51:23.898021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3d164ad0>]}
+[0m21:51:23.901259 [info ] [MainThread]: 
+[0m21:51:23.902503 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:51:23.903872 [info ] [MainThread]: 
+[0m21:51:23.905314 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:51:23.911286 [debug] [ThreadPool]: Acquiring new postgres connection 'list_canaza_dw'
+[0m21:51:24.002788 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw"
+[0m21:51:24.004263 [debug] [ThreadPool]: On list_canaza_dw: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:51:24.005482 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:24.045174 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.040 seconds
+[0m21:51:24.047668 [debug] [ThreadPool]: On list_canaza_dw: Close
+[0m21:51:24.051146 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_canaza_dw, now list_canaza_dw_staging)
+[0m21:51:24.058293 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw_staging"
+[0m21:51:24.059579 [debug] [ThreadPool]: On list_canaza_dw_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw_staging"} */
+select
+      'canaza_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'staging'
+    union all
+    select
+      'canaza_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'staging'
+    union all
+    select
+      'canaza_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'staging'
+  
+[0m21:51:24.060615 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:51:24.079746 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.019 seconds
+[0m21:51:24.082755 [debug] [ThreadPool]: On list_canaza_dw_staging: ROLLBACK
+[0m21:51:24.084309 [debug] [ThreadPool]: On list_canaza_dw_staging: Close
+[0m21:51:24.085689 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_canaza_dw_staging, now list_canaza_dw_marts)
+[0m21:51:24.089623 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw_marts"
+[0m21:51:24.091044 [debug] [ThreadPool]: On list_canaza_dw_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw_marts"} */
+select
+      'canaza_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts'
+    union all
+    select
+      'canaza_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts'
+    union all
+    select
+      'canaza_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts'
+  
+[0m21:51:24.092166 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:51:24.106058 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.014 seconds
+[0m21:51:24.108547 [debug] [ThreadPool]: On list_canaza_dw_marts: ROLLBACK
+[0m21:51:24.110033 [debug] [ThreadPool]: On list_canaza_dw_marts: Close
+[0m21:51:24.117240 [debug] [MainThread]: Using postgres connection "master"
+[0m21:51:24.118639 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:51:24.119882 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:51:24.137811 [debug] [MainThread]: SQL status: SELECT 15 in 0.018 seconds
+[0m21:51:24.140304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3ddc4fd0>]}
+[0m21:51:24.141925 [debug] [MainThread]: On master: ROLLBACK
+[0m21:51:24.143140 [debug] [MainThread]: On master: COMMIT
+[0m21:51:24.143963 [debug] [MainThread]: Using postgres connection "master"
+[0m21:51:24.144854 [debug] [MainThread]: On master: COMMIT
+[0m21:51:24.146391 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m21:51:24.147388 [debug] [MainThread]: On master: Close
+[0m21:51:24.154536 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_categoria
+[0m21:51:24.155891 [info ] [Thread-1 (]: 1 of 7 START sql view model staging.stg_categoria .............................. [RUN]
+[0m21:51:24.157270 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_canaza_dw_marts, now model.canaza_bi.stg_categoria)
+[0m21:51:24.158194 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_categoria
+[0m21:51:24.166805 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_categoria"
+[0m21:51:24.178728 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_categoria
+[0m21:51:24.211916 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_categoria"
+[0m21:51:24.228104 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_categoria"
+[0m21:51:24.229294 [debug] [Thread-1 (]: On model.canaza_bi.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_categoria"} */
+
+  create view "canaza_dw"."staging"."stg_categoria__dbt_tmp"
+    
+    
+  as (
+    select
+    id_categoria,
+    cod_categoria,
+    desc_categoria
+from raw.categoria
+  );
+[0m21:51:24.230297 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:24.247214 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.017 seconds
+[0m21:51:24.255510 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_categoria"
+[0m21:51:24.256646 [debug] [Thread-1 (]: On model.canaza_bi.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_categoria"} */
+alter table "canaza_dw"."staging"."stg_categoria" rename to "stg_categoria__dbt_backup"
+[0m21:51:24.260017 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m21:51:24.264487 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_categoria"
+[0m21:51:24.266450 [debug] [Thread-1 (]: On model.canaza_bi.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_categoria"} */
+alter table "canaza_dw"."staging"."stg_categoria__dbt_tmp" rename to "stg_categoria"
+[0m21:51:24.268763 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.286872 [debug] [Thread-1 (]: On model.canaza_bi.stg_categoria: COMMIT
+[0m21:51:24.288160 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_categoria"
+[0m21:51:24.289321 [debug] [Thread-1 (]: On model.canaza_bi.stg_categoria: COMMIT
+[0m21:51:24.292592 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:24.299812 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_categoria__dbt_backup"
+[0m21:51:24.306493 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_categoria"
+[0m21:51:24.308166 [debug] [Thread-1 (]: On model.canaza_bi.stg_categoria: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_categoria"} */
+drop view if exists "canaza_dw"."staging"."stg_categoria__dbt_backup" cascade
+[0m21:51:24.313006 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:24.317032 [debug] [Thread-1 (]: On model.canaza_bi.stg_categoria: Close
+[0m21:51:24.320101 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3d19d510>]}
+[0m21:51:24.321957 [info ] [Thread-1 (]: 1 of 7 OK created sql view model staging.stg_categoria ......................... [[32mCREATE VIEW[0m in 0.16s]
+[0m21:51:24.323540 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_categoria
+[0m21:51:24.324647 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_comprobante
+[0m21:51:24.325732 [info ] [Thread-1 (]: 2 of 7 START sql view model staging.stg_comprobante ............................ [RUN]
+[0m21:51:24.326911 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_categoria, now model.canaza_bi.stg_comprobante)
+[0m21:51:24.328055 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_comprobante
+[0m21:51:24.331010 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_comprobante"
+[0m21:51:24.342157 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_comprobante
+[0m21:51:24.346429 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_comprobante"
+[0m21:51:24.358310 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:24.359495 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante"} */
+
+  create view "canaza_dw"."staging"."stg_comprobante__dbt_tmp"
+    
+    
+  as (
+    select
+    id_comprobante,
+    fecha_emision,
+    fecha_vcto,
+    cod_tipo_cpe,
+    serie,
+    numero,
+    id_entidad,
+    ruc_dni,
+    moneda,
+    mto_gravada,
+    mto_igv,
+    mto_descuento,
+    mto_total,
+    pagado,
+    forma_pago,
+    anulado
+from raw.comprobante
+where anulado = false
+  );
+[0m21:51:24.360472 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:24.373267 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.013 seconds
+[0m21:51:24.377414 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:24.378499 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante"} */
+alter table "canaza_dw"."staging"."stg_comprobante" rename to "stg_comprobante__dbt_backup"
+[0m21:51:24.380534 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.385874 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:24.387226 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante"} */
+alter table "canaza_dw"."staging"."stg_comprobante__dbt_tmp" rename to "stg_comprobante"
+[0m21:51:24.389058 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.391434 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: COMMIT
+[0m21:51:24.392834 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:24.393895 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: COMMIT
+[0m21:51:24.396743 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:24.400747 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_comprobante__dbt_backup"
+[0m21:51:24.402740 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:24.403986 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante"} */
+drop view if exists "canaza_dw"."staging"."stg_comprobante__dbt_backup" cascade
+[0m21:51:24.407345 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m21:51:24.409517 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: Close
+[0m21:51:24.411845 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3a003450>]}
+[0m21:51:24.413416 [info ] [Thread-1 (]: 2 of 7 OK created sql view model staging.stg_comprobante ....................... [[32mCREATE VIEW[0m in 0.08s]
+[0m21:51:24.414899 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_comprobante
+[0m21:51:24.416290 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_comprobante_detalle
+[0m21:51:24.417672 [info ] [Thread-1 (]: 3 of 7 START sql view model staging.stg_comprobante_detalle .................... [RUN]
+[0m21:51:24.419056 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_comprobante, now model.canaza_bi.stg_comprobante_detalle)
+[0m21:51:24.420224 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_comprobante_detalle
+[0m21:51:24.422820 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:24.434550 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_comprobante_detalle
+[0m21:51:24.438805 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:24.450179 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:24.451500 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante_detalle"} */
+
+  create view "canaza_dw"."staging"."stg_comprobante_detalle__dbt_tmp"
+    
+    
+  as (
+    select
+    id_detalle,
+    id_comprobante,
+    id_producto,
+    cantidad,
+    precio_unit_sinigv,
+    costo_unit,
+    subtotal_sinigv,
+    igv_linea,
+    subtotal_conigv
+from raw.comprobante_detalle
+  );
+[0m21:51:24.453102 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:24.464520 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.011 seconds
+[0m21:51:24.468740 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:24.470096 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante_detalle"} */
+alter table "canaza_dw"."staging"."stg_comprobante_detalle" rename to "stg_comprobante_detalle__dbt_backup"
+[0m21:51:24.486059 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.015 seconds
+[0m21:51:24.490539 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:24.491743 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante_detalle"} */
+alter table "canaza_dw"."staging"."stg_comprobante_detalle__dbt_tmp" rename to "stg_comprobante_detalle"
+[0m21:51:24.493656 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.495728 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: COMMIT
+[0m21:51:24.496842 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:24.497860 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: COMMIT
+[0m21:51:24.500777 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:24.504503 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_comprobante_detalle__dbt_backup"
+[0m21:51:24.506008 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:24.507361 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante_detalle"} */
+drop view if exists "canaza_dw"."staging"."stg_comprobante_detalle__dbt_backup" cascade
+[0m21:51:24.511649 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:24.514023 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: Close
+[0m21:51:24.516136 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3b9d6ed0>]}
+[0m21:51:24.517879 [info ] [Thread-1 (]: 3 of 7 OK created sql view model staging.stg_comprobante_detalle ............... [[32mCREATE VIEW[0m in 0.10s]
+[0m21:51:24.519221 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_comprobante_detalle
+[0m21:51:24.520468 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_entidad
+[0m21:51:24.521711 [info ] [Thread-1 (]: 4 of 7 START sql view model staging.stg_entidad ................................ [RUN]
+[0m21:51:24.523366 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_comprobante_detalle, now model.canaza_bi.stg_entidad)
+[0m21:51:24.524733 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_entidad
+[0m21:51:24.527417 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_entidad"
+[0m21:51:24.538704 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_entidad
+[0m21:51:24.543312 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_entidad"
+[0m21:51:24.558122 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:24.559245 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_entidad"} */
+
+  create view "canaza_dw"."staging"."stg_entidad__dbt_tmp"
+    
+    
+  as (
+    select
+    id_entidad,
+    cod_tipo_doc,
+    nro_documento,
+    denominacion,
+    razon_comercial,
+    direccion,
+    email,
+    telefono
+from raw.entidad
+  );
+[0m21:51:24.560739 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:24.573033 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.012 seconds
+[0m21:51:24.577190 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:24.578816 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_entidad"} */
+alter table "canaza_dw"."staging"."stg_entidad" rename to "stg_entidad__dbt_backup"
+[0m21:51:24.580682 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.586312 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:24.587599 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_entidad"} */
+alter table "canaza_dw"."staging"."stg_entidad__dbt_tmp" rename to "stg_entidad"
+[0m21:51:24.589152 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.590834 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: COMMIT
+[0m21:51:24.591927 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:24.593192 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: COMMIT
+[0m21:51:24.602207 [debug] [Thread-1 (]: SQL status: COMMIT in 0.008 seconds
+[0m21:51:24.605525 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_entidad__dbt_backup"
+[0m21:51:24.606787 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:24.607870 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_entidad"} */
+drop view if exists "canaza_dw"."staging"."stg_entidad__dbt_backup" cascade
+[0m21:51:24.611640 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:24.614426 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: Close
+[0m21:51:24.615851 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3a03e990>]}
+[0m21:51:24.617238 [info ] [Thread-1 (]: 4 of 7 OK created sql view model staging.stg_entidad ........................... [[32mCREATE VIEW[0m in 0.09s]
+[0m21:51:24.618690 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_entidad
+[0m21:51:24.600936 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_producto
+[0m21:51:24.603087 [info ] [Thread-1 (]: 5 of 7 START sql view model staging.stg_producto ............................... [RUN]
+[0m21:51:24.604395 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_entidad, now model.canaza_bi.stg_producto)
+[0m21:51:24.605586 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_producto
+[0m21:51:24.610448 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_producto"
+[0m21:51:24.621042 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_producto
+[0m21:51:24.625591 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_producto"
+[0m21:51:24.637873 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:24.639304 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_producto"} */
+
+  create view "canaza_dw"."staging"."stg_producto__dbt_tmp"
+    
+    
+  as (
+    with productos as (
+    select
+        id_producto,
+        cod_interno,
+        descripcion,
+        cod_unidad_med,
+        costo_compra,
+        precio_venta,
+        precio_venta_igv,
+        id_categoria,
+        stock_actual
+    from raw.producto
+),
+categorias as (
+    select
+        id_categoria,
+        cod_categoria,
+        desc_categoria
+    from raw.categoria
+)
+
+select
+    p.id_producto,
+    p.cod_interno,
+    trim(p.descripcion) as descripcion,
+    p.cod_unidad_med,
+    p.costo_compra,
+    p.precio_venta,
+    p.precio_venta_igv,
+    p.stock_actual,
+    c.id_categoria,
+    c.cod_categoria,
+    c.desc_categoria
+from productos p
+left join categorias c
+    on p.id_categoria = c.id_categoria
+  );
+[0m21:51:24.640455 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:24.659226 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.019 seconds
+[0m21:51:24.663552 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:24.664895 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_producto"} */
+alter table "canaza_dw"."staging"."stg_producto" rename to "stg_producto__dbt_backup"
+[0m21:51:24.667007 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.670470 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:24.671651 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_producto"} */
+alter table "canaza_dw"."staging"."stg_producto__dbt_tmp" rename to "stg_producto"
+[0m21:51:24.673341 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.675298 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: COMMIT
+[0m21:51:24.676407 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:24.677488 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: COMMIT
+[0m21:51:24.680722 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:24.684373 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_producto__dbt_backup"
+[0m21:51:24.686390 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:24.687459 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_producto"} */
+drop view if exists "canaza_dw"."staging"."stg_producto__dbt_backup" cascade
+[0m21:51:24.691516 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:24.693793 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: Close
+[0m21:51:24.695007 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3a03fc90>]}
+[0m21:51:24.696736 [info ] [Thread-1 (]: 5 of 7 OK created sql view model staging.stg_producto .......................... [[32mCREATE VIEW[0m in 0.09s]
+[0m21:51:24.698619 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_producto
+[0m21:51:24.700052 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_tipo_comprobante
+[0m21:51:24.701412 [info ] [Thread-1 (]: 6 of 7 START sql view model staging.stg_tipo_comprobante ....................... [RUN]
+[0m21:51:24.702593 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_producto, now model.canaza_bi.stg_tipo_comprobante)
+[0m21:51:24.703730 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_tipo_comprobante
+[0m21:51:24.706701 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:24.717258 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_tipo_comprobante
+[0m21:51:24.721926 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:24.735699 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:24.737102 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_comprobante"} */
+
+  create view "canaza_dw"."staging"."stg_tipo_comprobante__dbt_tmp"
+    
+    
+  as (
+    select
+    cod_tipo_cpe,
+    desc_tipo_cpe
+from raw.tipo_comprobante
+  );
+[0m21:51:24.738436 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:24.749938 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.011 seconds
+[0m21:51:24.754239 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:24.755490 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_comprobante"} */
+alter table "canaza_dw"."staging"."stg_tipo_comprobante" rename to "stg_tipo_comprobante__dbt_backup"
+[0m21:51:24.757234 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.760869 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:24.761879 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_comprobante"} */
+alter table "canaza_dw"."staging"."stg_tipo_comprobante__dbt_tmp" rename to "stg_tipo_comprobante"
+[0m21:51:24.763368 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.765488 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: COMMIT
+[0m21:51:24.766561 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:24.768387 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: COMMIT
+[0m21:51:24.771275 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:24.776676 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_tipo_comprobante__dbt_backup"
+[0m21:51:24.778354 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:24.779351 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_comprobante"} */
+drop view if exists "canaza_dw"."staging"."stg_tipo_comprobante__dbt_backup" cascade
+[0m21:51:24.787819 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.007 seconds
+[0m21:51:24.790561 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: Close
+[0m21:51:24.792260 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3a07e0d0>]}
+[0m21:51:24.793789 [info ] [Thread-1 (]: 6 of 7 OK created sql view model staging.stg_tipo_comprobante .................. [[32mCREATE VIEW[0m in 0.09s]
+[0m21:51:24.795279 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_tipo_comprobante
+[0m21:51:24.796529 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_tipo_documento
+[0m21:51:24.797962 [info ] [Thread-1 (]: 7 of 7 START sql view model staging.stg_tipo_documento ......................... [RUN]
+[0m21:51:24.799132 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_tipo_comprobante, now model.canaza_bi.stg_tipo_documento)
+[0m21:51:24.800086 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_tipo_documento
+[0m21:51:24.802590 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_tipo_documento"
+[0m21:51:24.813395 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_tipo_documento
+[0m21:51:24.817660 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_tipo_documento"
+[0m21:51:24.828479 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:24.829633 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_documento"} */
+
+  create view "canaza_dw"."staging"."stg_tipo_documento__dbt_tmp"
+    
+    
+  as (
+    select
+    cod_tipo_doc,
+    desc_tipo_doc
+from raw.tipo_documento
+  );
+[0m21:51:24.831181 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:24.843719 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.012 seconds
+[0m21:51:24.847965 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:24.849647 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_documento"} */
+alter table "canaza_dw"."staging"."stg_tipo_documento" rename to "stg_tipo_documento__dbt_backup"
+[0m21:51:24.851450 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.855522 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:24.857260 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_documento"} */
+alter table "canaza_dw"."staging"."stg_tipo_documento__dbt_tmp" rename to "stg_tipo_documento"
+[0m21:51:24.859428 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:24.861653 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: COMMIT
+[0m21:51:24.862750 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:24.863777 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: COMMIT
+[0m21:51:24.867239 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:24.870722 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_tipo_documento__dbt_backup"
+[0m21:51:24.872341 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:24.873618 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_documento"} */
+drop view if exists "canaza_dw"."staging"."stg_tipo_documento__dbt_backup" cascade
+[0m21:51:24.877769 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:24.880628 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: Close
+[0m21:51:24.882438 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9bf4fd1f-c807-4517-bd04-351d0d3333c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3dd9b9d0>]}
+[0m21:51:24.883994 [info ] [Thread-1 (]: 7 of 7 OK created sql view model staging.stg_tipo_documento .................... [[32mCREATE VIEW[0m in 0.08s]
+[0m21:51:24.885552 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_tipo_documento
+[0m21:51:24.888161 [debug] [MainThread]: On master: COMMIT
+[0m21:51:24.889133 [debug] [MainThread]: Using postgres connection "master"
+[0m21:51:24.889976 [debug] [MainThread]: On master: COMMIT
+[0m21:51:24.890681 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:51:24.900854 [debug] [MainThread]: SQL status: COMMIT in 0.010 seconds
+[0m21:51:24.902009 [debug] [MainThread]: On master: Close
+[0m21:51:24.903101 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:51:24.903929 [debug] [MainThread]: Connection 'model.canaza_bi.stg_tipo_documento' was properly closed.
+[0m21:51:24.905105 [info ] [MainThread]: 
+[0m21:51:24.906146 [info ] [MainThread]: Finished running 7 view models in 0 hours 0 minutes and 1.00 seconds (1.00s).
+[0m21:51:24.908326 [debug] [MainThread]: Command end result
+[0m21:51:24.966732 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/canaza_bi/target/manifest.json
+[0m21:51:24.974715 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/canaza_bi/target/semantic_manifest.json
+[0m21:51:24.988035 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/canaza_bi/target/run_results.json
+[0m21:51:24.989104 [info ] [MainThread]: 
+[0m21:51:24.990442 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:51:24.991536 [info ] [MainThread]: 
+[0m21:51:24.992527 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m21:51:24.995419 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.5790741, "process_in_blocks": "114656", "process_kernel_time": 1.236102, "process_mem_max_rss": "129780", "process_out_blocks": "0", "process_user_time": 3.284153}
+[0m21:51:24.996498 [debug] [MainThread]: Command `dbt run` succeeded at 21:51:24.996389 after 2.58 seconds
+[0m21:51:24.997639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c3eeb9090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c439aba10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c1c439c6410>]}
+[0m21:51:24.998809 [debug] [MainThread]: Flushing usage events
+[0m21:51:26.268525 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:51:44.287043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6e26cd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6e545690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6e26d550>]}
+
+
+============================== 21:51:44.292868 | b5917046-c904-4ccd-be06-5b62ded77c19 ==============================
+[0m21:51:44.292868 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:51:44.295562 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'empty': 'False', 'profiles_dir': '/root/.dbt', 'introspect': 'True', 'target_path': 'None', 'printer_width': '80', 'partial_parse': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'log_path': '/usr/app/canaza_bi/logs', 'warn_error': 'None', 'debug': 'False', 'invocation_command': 'dbt run --select +marts', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'log_format': 'default'}
+[0m21:51:44.539851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6d5ec090>]}
+[0m21:51:44.622193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa71396e90>]}
+[0m21:51:44.624591 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:51:44.759365 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m21:51:45.175033 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:51:45.177254 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:51:45.178710 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:51:45.186751 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.canaza_bi.intermediate
+[0m21:51:45.241368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6cd4bed0>]}
+[0m21:51:45.465019 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/canaza_bi/target/manifest.json
+[0m21:51:45.472990 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/canaza_bi/target/semantic_manifest.json
+[0m21:51:45.498130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6c1a0e10>]}
+[0m21:51:45.499625 [info ] [MainThread]: Found 12 models, 33 data tests, 466 macros
+[0m21:51:45.500852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6c529d10>]}
+[0m21:51:45.506692 [info ] [MainThread]: 
+[0m21:51:45.508309 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:51:45.509564 [info ] [MainThread]: 
+[0m21:51:45.511702 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:51:45.518332 [debug] [ThreadPool]: Acquiring new postgres connection 'list_canaza_dw'
+[0m21:51:45.576227 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw"
+[0m21:51:45.577650 [debug] [ThreadPool]: On list_canaza_dw: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:51:45.578633 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:45.595512 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.017 seconds
+[0m21:51:45.598242 [debug] [ThreadPool]: On list_canaza_dw: Close
+[0m21:51:45.602144 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw"
+[0m21:51:45.603765 [debug] [ThreadPool]: On list_canaza_dw: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:51:45.605219 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:51:45.617879 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.013 seconds
+[0m21:51:45.620142 [debug] [ThreadPool]: On list_canaza_dw: Close
+[0m21:51:45.623657 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_canaza_dw, now list_canaza_dw_marts)
+[0m21:51:45.631928 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw_marts"
+[0m21:51:45.633453 [debug] [ThreadPool]: On list_canaza_dw_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw_marts"} */
+select
+      'canaza_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts'
+    union all
+    select
+      'canaza_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts'
+    union all
+    select
+      'canaza_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts'
+  
+[0m21:51:45.634529 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:51:45.651893 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.017 seconds
+[0m21:51:45.655076 [debug] [ThreadPool]: On list_canaza_dw_marts: ROLLBACK
+[0m21:51:45.656570 [debug] [ThreadPool]: On list_canaza_dw_marts: Close
+[0m21:51:45.658452 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_canaza_dw_marts, now list_canaza_dw_staging)
+[0m21:51:45.662629 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw_staging"
+[0m21:51:45.664020 [debug] [ThreadPool]: On list_canaza_dw_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw_staging"} */
+select
+      'canaza_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'staging'
+    union all
+    select
+      'canaza_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'staging'
+    union all
+    select
+      'canaza_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'staging'
+  
+[0m21:51:45.665103 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:51:45.680216 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.015 seconds
+[0m21:51:45.682652 [debug] [ThreadPool]: On list_canaza_dw_staging: ROLLBACK
+[0m21:51:45.684448 [debug] [ThreadPool]: On list_canaza_dw_staging: Close
+[0m21:51:45.692504 [debug] [MainThread]: Using postgres connection "master"
+[0m21:51:45.693954 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:51:45.695067 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:51:45.711612 [debug] [MainThread]: SQL status: SELECT 15 in 0.016 seconds
+[0m21:51:45.714436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6c1e0410>]}
+[0m21:51:45.715920 [debug] [MainThread]: On master: ROLLBACK
+[0m21:51:45.717446 [debug] [MainThread]: On master: COMMIT
+[0m21:51:45.718563 [debug] [MainThread]: Using postgres connection "master"
+[0m21:51:45.719869 [debug] [MainThread]: On master: COMMIT
+[0m21:51:45.721820 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:51:45.722938 [debug] [MainThread]: On master: Close
+[0m21:51:45.729727 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_comprobante
+[0m21:51:45.731337 [info ] [Thread-1 (]: 1 of 11 START sql view model staging.stg_comprobante ........................... [RUN]
+[0m21:51:45.733482 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_canaza_dw_staging, now model.canaza_bi.stg_comprobante)
+[0m21:51:45.735460 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_comprobante
+[0m21:51:45.744169 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_comprobante"
+[0m21:51:45.756696 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_comprobante
+[0m21:51:45.795324 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_comprobante"
+[0m21:51:45.808070 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:45.809405 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante"} */
+
+  create view "canaza_dw"."staging"."stg_comprobante__dbt_tmp"
+    
+    
+  as (
+    select
+    id_comprobante,
+    fecha_emision,
+    fecha_vcto,
+    cod_tipo_cpe,
+    serie,
+    numero,
+    id_entidad,
+    ruc_dni,
+    moneda,
+    mto_gravada,
+    mto_igv,
+    mto_descuento,
+    mto_total,
+    pagado,
+    forma_pago,
+    anulado
+from raw.comprobante
+where anulado = false
+  );
+[0m21:51:45.810598 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:45.824099 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.013 seconds
+[0m21:51:45.832355 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:45.833990 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante"} */
+alter table "canaza_dw"."staging"."stg_comprobante" rename to "stg_comprobante__dbt_backup"
+[0m21:51:45.836004 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:45.840719 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:45.842046 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante"} */
+alter table "canaza_dw"."staging"."stg_comprobante__dbt_tmp" rename to "stg_comprobante"
+[0m21:51:45.843820 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:45.868298 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: COMMIT
+[0m21:51:45.869930 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:45.870989 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: COMMIT
+[0m21:51:45.874050 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:45.881935 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_comprobante__dbt_backup"
+[0m21:51:45.889445 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante"
+[0m21:51:45.890926 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante"} */
+drop view if exists "canaza_dw"."staging"."stg_comprobante__dbt_backup" cascade
+[0m21:51:45.895337 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:45.899476 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante: Close
+[0m21:51:45.902680 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6ac12f90>]}
+[0m21:51:45.904263 [info ] [Thread-1 (]: 1 of 11 OK created sql view model staging.stg_comprobante ...................... [[32mCREATE VIEW[0m in 0.17s]
+[0m21:51:45.905747 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_comprobante
+[0m21:51:45.906945 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_comprobante_detalle
+[0m21:51:45.908375 [info ] [Thread-1 (]: 2 of 11 START sql view model staging.stg_comprobante_detalle ................... [RUN]
+[0m21:51:45.910000 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_comprobante, now model.canaza_bi.stg_comprobante_detalle)
+[0m21:51:45.911240 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_comprobante_detalle
+[0m21:51:45.914631 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:45.925793 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_comprobante_detalle
+[0m21:51:45.930816 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:45.944390 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:45.946117 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante_detalle"} */
+
+  create view "canaza_dw"."staging"."stg_comprobante_detalle__dbt_tmp"
+    
+    
+  as (
+    select
+    id_detalle,
+    id_comprobante,
+    id_producto,
+    cantidad,
+    precio_unit_sinigv,
+    costo_unit,
+    subtotal_sinigv,
+    igv_linea,
+    subtotal_conigv
+from raw.comprobante_detalle
+  );
+[0m21:51:45.947232 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:45.960155 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.013 seconds
+[0m21:51:45.966580 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:45.967857 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante_detalle"} */
+alter table "canaza_dw"."staging"."stg_comprobante_detalle" rename to "stg_comprobante_detalle__dbt_backup"
+[0m21:51:45.969668 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:45.974065 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:45.975761 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante_detalle"} */
+alter table "canaza_dw"."staging"."stg_comprobante_detalle__dbt_tmp" rename to "stg_comprobante_detalle"
+[0m21:51:45.977957 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:45.979772 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: COMMIT
+[0m21:51:45.980832 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:45.982261 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: COMMIT
+[0m21:51:45.985483 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:45.988715 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_comprobante_detalle__dbt_backup"
+[0m21:51:45.990332 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_comprobante_detalle"
+[0m21:51:45.991499 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_comprobante_detalle"} */
+drop view if exists "canaza_dw"."staging"."stg_comprobante_detalle__dbt_backup" cascade
+[0m21:51:45.995658 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:45.998858 [debug] [Thread-1 (]: On model.canaza_bi.stg_comprobante_detalle: Close
+[0m21:51:46.000621 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6acbeb90>]}
+[0m21:51:46.002443 [info ] [Thread-1 (]: 2 of 11 OK created sql view model staging.stg_comprobante_detalle .............. [[32mCREATE VIEW[0m in 0.09s]
+[0m21:51:46.004488 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_comprobante_detalle
+[0m21:51:46.006292 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_entidad
+[0m21:51:46.008066 [info ] [Thread-1 (]: 3 of 11 START sql view model staging.stg_entidad ............................... [RUN]
+[0m21:51:46.009729 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_comprobante_detalle, now model.canaza_bi.stg_entidad)
+[0m21:51:46.010960 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_entidad
+[0m21:51:46.014286 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_entidad"
+[0m21:51:46.025789 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_entidad
+[0m21:51:46.030471 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_entidad"
+[0m21:51:46.042504 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:46.043660 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_entidad"} */
+
+  create view "canaza_dw"."staging"."stg_entidad__dbt_tmp"
+    
+    
+  as (
+    select
+    id_entidad,
+    cod_tipo_doc,
+    nro_documento,
+    denominacion,
+    razon_comercial,
+    direccion,
+    email,
+    telefono
+from raw.entidad
+  );
+[0m21:51:46.044696 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.057834 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.013 seconds
+[0m21:51:46.061989 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:46.063190 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_entidad"} */
+alter table "canaza_dw"."staging"."stg_entidad" rename to "stg_entidad__dbt_backup"
+[0m21:51:46.065030 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.068398 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:46.070237 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_entidad"} */
+alter table "canaza_dw"."staging"."stg_entidad__dbt_tmp" rename to "stg_entidad"
+[0m21:51:46.071882 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.074572 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: COMMIT
+[0m21:51:46.075951 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:46.077386 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: COMMIT
+[0m21:51:46.080327 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:46.083687 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_entidad__dbt_backup"
+[0m21:51:46.084960 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_entidad"
+[0m21:51:46.085961 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_entidad"} */
+drop view if exists "canaza_dw"."staging"."stg_entidad__dbt_backup" cascade
+[0m21:51:46.090025 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:46.092722 [debug] [Thread-1 (]: On model.canaza_bi.stg_entidad: Close
+[0m21:51:46.094232 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6ac11dd0>]}
+[0m21:51:46.095833 [info ] [Thread-1 (]: 3 of 11 OK created sql view model staging.stg_entidad .......................... [[32mCREATE VIEW[0m in 0.08s]
+[0m21:51:46.097776 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_entidad
+[0m21:51:46.098916 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_producto
+[0m21:51:46.100207 [info ] [Thread-1 (]: 4 of 11 START sql view model staging.stg_producto .............................. [RUN]
+[0m21:51:46.101553 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_entidad, now model.canaza_bi.stg_producto)
+[0m21:51:46.103147 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_producto
+[0m21:51:46.106464 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_producto"
+[0m21:51:46.117631 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_producto
+[0m21:51:46.122120 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_producto"
+[0m21:51:46.134398 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:46.135720 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_producto"} */
+
+  create view "canaza_dw"."staging"."stg_producto__dbt_tmp"
+    
+    
+  as (
+    with productos as (
+    select
+        id_producto,
+        cod_interno,
+        descripcion,
+        cod_unidad_med,
+        costo_compra,
+        precio_venta,
+        precio_venta_igv,
+        id_categoria,
+        stock_actual
+    from raw.producto
+),
+categorias as (
+    select
+        id_categoria,
+        cod_categoria,
+        desc_categoria
+    from raw.categoria
+)
+
+select
+    p.id_producto,
+    p.cod_interno,
+    trim(p.descripcion) as descripcion,
+    p.cod_unidad_med,
+    p.costo_compra,
+    p.precio_venta,
+    p.precio_venta_igv,
+    p.stock_actual,
+    c.id_categoria,
+    c.cod_categoria,
+    c.desc_categoria
+from productos p
+left join categorias c
+    on p.id_categoria = c.id_categoria
+  );
+[0m21:51:46.136691 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.156797 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.020 seconds
+[0m21:51:46.163665 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:46.165362 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_producto"} */
+alter table "canaza_dw"."staging"."stg_producto" rename to "stg_producto__dbt_backup"
+[0m21:51:46.167395 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.171870 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:46.173503 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_producto"} */
+alter table "canaza_dw"."staging"."stg_producto__dbt_tmp" rename to "stg_producto"
+[0m21:51:46.175209 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.177455 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: COMMIT
+[0m21:51:46.179096 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:46.180050 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: COMMIT
+[0m21:51:46.183013 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:46.187233 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_producto__dbt_backup"
+[0m21:51:46.188963 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_producto"
+[0m21:51:46.190092 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_producto"} */
+drop view if exists "canaza_dw"."staging"."stg_producto__dbt_backup" cascade
+[0m21:51:46.193839 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:46.196220 [debug] [Thread-1 (]: On model.canaza_bi.stg_producto: Close
+[0m21:51:46.197636 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6934e1d0>]}
+[0m21:51:46.198974 [info ] [Thread-1 (]: 4 of 11 OK created sql view model staging.stg_producto ......................... [[32mCREATE VIEW[0m in 0.10s]
+[0m21:51:46.201034 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_producto
+[0m21:51:46.203153 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_tipo_comprobante
+[0m21:51:46.205222 [info ] [Thread-1 (]: 5 of 11 START sql view model staging.stg_tipo_comprobante ...................... [RUN]
+[0m21:51:46.206858 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_producto, now model.canaza_bi.stg_tipo_comprobante)
+[0m21:51:46.208293 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_tipo_comprobante
+[0m21:51:46.211731 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:46.224978 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_tipo_comprobante
+[0m21:51:46.230180 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:46.243517 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:46.244938 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_comprobante"} */
+
+  create view "canaza_dw"."staging"."stg_tipo_comprobante__dbt_tmp"
+    
+    
+  as (
+    select
+    cod_tipo_cpe,
+    desc_tipo_cpe
+from raw.tipo_comprobante
+  );
+[0m21:51:46.246017 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.258876 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.013 seconds
+[0m21:51:46.263278 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:46.264457 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_comprobante"} */
+alter table "canaza_dw"."staging"."stg_tipo_comprobante" rename to "stg_tipo_comprobante__dbt_backup"
+[0m21:51:46.266079 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.270019 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:46.271859 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_comprobante"} */
+alter table "canaza_dw"."staging"."stg_tipo_comprobante__dbt_tmp" rename to "stg_tipo_comprobante"
+[0m21:51:46.273720 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.276496 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: COMMIT
+[0m21:51:46.277661 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:46.278786 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: COMMIT
+[0m21:51:46.281523 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:46.286178 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_tipo_comprobante__dbt_backup"
+[0m21:51:46.287677 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_comprobante"
+[0m21:51:46.288942 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_comprobante"} */
+drop view if exists "canaza_dw"."staging"."stg_tipo_comprobante__dbt_backup" cascade
+[0m21:51:46.292712 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m21:51:46.294849 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_comprobante: Close
+[0m21:51:46.296393 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa693431d0>]}
+[0m21:51:46.297914 [info ] [Thread-1 (]: 5 of 11 OK created sql view model staging.stg_tipo_comprobante ................. [[32mCREATE VIEW[0m in 0.09s]
+[0m21:51:46.299762 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_tipo_comprobante
+[0m21:51:46.301367 [debug] [Thread-1 (]: Began running node model.canaza_bi.stg_tipo_documento
+[0m21:51:46.302957 [info ] [Thread-1 (]: 6 of 11 START sql view model staging.stg_tipo_documento ........................ [RUN]
+[0m21:51:46.304942 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_tipo_comprobante, now model.canaza_bi.stg_tipo_documento)
+[0m21:51:46.306614 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.stg_tipo_documento
+[0m21:51:46.309893 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.stg_tipo_documento"
+[0m21:51:46.321763 [debug] [Thread-1 (]: Began executing node model.canaza_bi.stg_tipo_documento
+[0m21:51:46.327617 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.stg_tipo_documento"
+[0m21:51:46.339412 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:46.340786 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_documento"} */
+
+  create view "canaza_dw"."staging"."stg_tipo_documento__dbt_tmp"
+    
+    
+  as (
+    select
+    cod_tipo_doc,
+    desc_tipo_doc
+from raw.tipo_documento
+  );
+[0m21:51:46.341924 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.354327 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.012 seconds
+[0m21:51:46.358896 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:46.360176 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_documento"} */
+alter table "canaza_dw"."staging"."stg_tipo_documento" rename to "stg_tipo_documento__dbt_backup"
+[0m21:51:46.362047 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.368269 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:46.369838 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_documento"} */
+alter table "canaza_dw"."staging"."stg_tipo_documento__dbt_tmp" rename to "stg_tipo_documento"
+[0m21:51:46.371555 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.373863 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: COMMIT
+[0m21:51:46.375212 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:46.376522 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: COMMIT
+[0m21:51:46.383054 [debug] [Thread-1 (]: SQL status: COMMIT in 0.005 seconds
+[0m21:51:46.386746 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."staging"."stg_tipo_documento__dbt_backup"
+[0m21:51:46.388207 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.stg_tipo_documento"
+[0m21:51:46.389316 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.stg_tipo_documento"} */
+drop view if exists "canaza_dw"."staging"."stg_tipo_documento__dbt_backup" cascade
+[0m21:51:46.392992 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m21:51:46.395520 [debug] [Thread-1 (]: On model.canaza_bi.stg_tipo_documento: Close
+[0m21:51:46.397556 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6937a990>]}
+[0m21:51:46.398866 [info ] [Thread-1 (]: 6 of 11 OK created sql view model staging.stg_tipo_documento ................... [[32mCREATE VIEW[0m in 0.09s]
+[0m21:51:46.400663 [debug] [Thread-1 (]: Finished running node model.canaza_bi.stg_tipo_documento
+[0m21:51:46.402798 [debug] [Thread-1 (]: Began running node model.canaza_bi.dim_fecha
+[0m21:51:46.405028 [info ] [Thread-1 (]: 7 of 11 START sql table model marts.dim_fecha .................................. [RUN]
+[0m21:51:46.406700 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.stg_tipo_documento, now model.canaza_bi.dim_fecha)
+[0m21:51:46.407713 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.dim_fecha
+[0m21:51:46.412567 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.dim_fecha"
+[0m21:51:46.423891 [debug] [Thread-1 (]: Began executing node model.canaza_bi.dim_fecha
+[0m21:51:46.447251 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.dim_fecha"
+[0m21:51:46.458873 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_fecha"
+[0m21:51:46.460053 [debug] [Thread-1 (]: On model.canaza_bi.dim_fecha: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_fecha"} */
+
+  
+    
+
+  create  table "canaza_dw"."marts"."dim_fecha__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with fechas as (
+    select distinct
+        fecha_emision::date as fecha
+    from "canaza_dw"."staging"."stg_comprobante"
+    where fecha_emision is not null
+)
+
+select
+    cast(to_char(fecha, 'YYYYMMDD') as bigint)  as fecha_key,
+    fecha,
+    extract(day from fecha)::int                 as dia,
+    extract(isodow from fecha)::int              as dia_semana_numero,
+    to_char(fecha, 'TMDay')                      as dia_semana_desc,
+    extract(month from fecha)::int               as mes_numero,
+    to_char(fecha, 'TMMonth')                    as mes_desc,
+    extract(quarter from fecha)::int             as trimestre,
+    extract(year from fecha)::int                as anio
+from fechas
+  );
+  
+[0m21:51:46.461348 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.489626 [debug] [Thread-1 (]: SQL status: SELECT 750 in 0.028 seconds
+[0m21:51:46.498046 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_fecha"
+[0m21:51:46.499386 [debug] [Thread-1 (]: On model.canaza_bi.dim_fecha: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_fecha"} */
+alter table "canaza_dw"."marts"."dim_fecha" rename to "dim_fecha__dbt_backup"
+[0m21:51:46.501370 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.505456 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_fecha"
+[0m21:51:46.506648 [debug] [Thread-1 (]: On model.canaza_bi.dim_fecha: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_fecha"} */
+alter table "canaza_dw"."marts"."dim_fecha__dbt_tmp" rename to "dim_fecha"
+[0m21:51:46.508145 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:51:46.510099 [debug] [Thread-1 (]: On model.canaza_bi.dim_fecha: COMMIT
+[0m21:51:46.511193 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_fecha"
+[0m21:51:46.512164 [debug] [Thread-1 (]: On model.canaza_bi.dim_fecha: COMMIT
+[0m21:51:46.515854 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:46.519182 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."marts"."dim_fecha__dbt_backup"
+[0m21:51:46.523944 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_fecha"
+[0m21:51:46.525611 [debug] [Thread-1 (]: On model.canaza_bi.dim_fecha: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_fecha"} */
+drop table if exists "canaza_dw"."marts"."dim_fecha__dbt_backup" cascade
+[0m21:51:46.531083 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m21:51:46.533302 [debug] [Thread-1 (]: On model.canaza_bi.dim_fecha: Close
+[0m21:51:46.535589 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6d5856d0>]}
+[0m21:51:46.537595 [info ] [Thread-1 (]: 7 of 11 OK created sql table model marts.dim_fecha ............................. [[32mSELECT 750[0m in 0.13s]
+[0m21:51:46.539178 [debug] [Thread-1 (]: Finished running node model.canaza_bi.dim_fecha
+[0m21:51:46.540383 [debug] [Thread-1 (]: Began running node model.canaza_bi.dim_producto
+[0m21:51:46.541935 [info ] [Thread-1 (]: 8 of 11 START sql table model marts.dim_producto ............................... [RUN]
+[0m21:51:46.543440 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.dim_fecha, now model.canaza_bi.dim_producto)
+[0m21:51:46.544638 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.dim_producto
+[0m21:51:46.549332 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.dim_producto"
+[0m21:51:46.560875 [debug] [Thread-1 (]: Began executing node model.canaza_bi.dim_producto
+[0m21:51:46.566081 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.dim_producto"
+[0m21:51:46.577873 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_producto"
+[0m21:51:46.579448 [debug] [Thread-1 (]: On model.canaza_bi.dim_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_producto"} */
+
+  
+    
+
+  create  table "canaza_dw"."marts"."dim_producto__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    id_producto                             as producto_key,
+    id_producto,
+    cod_interno,
+    descripcion,
+    cod_unidad_med,
+    costo_compra                            as costo_compra_referencia,
+    precio_venta                            as precio_venta_referencia,
+    id_categoria,
+    cod_categoria,
+    desc_categoria
+from "canaza_dw"."staging"."stg_producto"
+  );
+  
+[0m21:51:46.580605 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.602170 [debug] [Thread-1 (]: SQL status: SELECT 1660 in 0.021 seconds
+[0m21:51:46.608499 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_producto"
+[0m21:51:46.610260 [debug] [Thread-1 (]: On model.canaza_bi.dim_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_producto"} */
+alter table "canaza_dw"."marts"."dim_producto" rename to "dim_producto__dbt_backup"
+[0m21:51:46.611900 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:51:46.615556 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_producto"
+[0m21:51:46.617561 [debug] [Thread-1 (]: On model.canaza_bi.dim_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_producto"} */
+alter table "canaza_dw"."marts"."dim_producto__dbt_tmp" rename to "dim_producto"
+[0m21:51:46.619398 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.621435 [debug] [Thread-1 (]: On model.canaza_bi.dim_producto: COMMIT
+[0m21:51:46.622493 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_producto"
+[0m21:51:46.623509 [debug] [Thread-1 (]: On model.canaza_bi.dim_producto: COMMIT
+[0m21:51:46.627483 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m21:51:46.630895 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."marts"."dim_producto__dbt_backup"
+[0m21:51:46.632402 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_producto"
+[0m21:51:46.633650 [debug] [Thread-1 (]: On model.canaza_bi.dim_producto: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_producto"} */
+drop table if exists "canaza_dw"."marts"."dim_producto__dbt_backup" cascade
+[0m21:51:46.638135 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m21:51:46.640786 [debug] [Thread-1 (]: On model.canaza_bi.dim_producto: Close
+[0m21:51:46.642194 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa693a0d50>]}
+[0m21:51:46.643490 [info ] [Thread-1 (]: 8 of 11 OK created sql table model marts.dim_producto .......................... [[32mSELECT 1660[0m in 0.10s]
+[0m21:51:46.644964 [debug] [Thread-1 (]: Finished running node model.canaza_bi.dim_producto
+[0m21:51:46.646692 [debug] [Thread-1 (]: Began running node model.canaza_bi.dim_tipo_cpe
+[0m21:51:46.648129 [info ] [Thread-1 (]: 9 of 11 START sql table model marts.dim_tipo_cpe ............................... [RUN]
+[0m21:51:46.649439 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.dim_producto, now model.canaza_bi.dim_tipo_cpe)
+[0m21:51:46.650503 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.dim_tipo_cpe
+[0m21:51:46.654845 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.dim_tipo_cpe"
+[0m21:51:46.667181 [debug] [Thread-1 (]: Began executing node model.canaza_bi.dim_tipo_cpe
+[0m21:51:46.671719 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.dim_tipo_cpe"
+[0m21:51:46.683280 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_tipo_cpe"
+[0m21:51:46.684667 [debug] [Thread-1 (]: On model.canaza_bi.dim_tipo_cpe: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_tipo_cpe"} */
+
+  
+    
+
+  create  table "canaza_dw"."marts"."dim_tipo_cpe__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select distinct
+    dense_rank() over (order by cod_tipo_cpe)    as tipo_cpe_key,
+    cod_tipo_cpe,
+    desc_tipo_cpe
+from "canaza_dw"."staging"."stg_tipo_comprobante"
+  );
+  
+[0m21:51:46.685846 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.707783 [debug] [Thread-1 (]: SQL status: SELECT 4 in 0.022 seconds
+[0m21:51:46.712296 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_tipo_cpe"
+[0m21:51:46.713469 [debug] [Thread-1 (]: On model.canaza_bi.dim_tipo_cpe: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_tipo_cpe"} */
+alter table "canaza_dw"."marts"."dim_tipo_cpe" rename to "dim_tipo_cpe__dbt_backup"
+[0m21:51:46.715510 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.719116 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_tipo_cpe"
+[0m21:51:46.720729 [debug] [Thread-1 (]: On model.canaza_bi.dim_tipo_cpe: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_tipo_cpe"} */
+alter table "canaza_dw"."marts"."dim_tipo_cpe__dbt_tmp" rename to "dim_tipo_cpe"
+[0m21:51:46.722627 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.724957 [debug] [Thread-1 (]: On model.canaza_bi.dim_tipo_cpe: COMMIT
+[0m21:51:46.726122 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_tipo_cpe"
+[0m21:51:46.727094 [debug] [Thread-1 (]: On model.canaza_bi.dim_tipo_cpe: COMMIT
+[0m21:51:46.730109 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m21:51:46.733894 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."marts"."dim_tipo_cpe__dbt_backup"
+[0m21:51:46.736281 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_tipo_cpe"
+[0m21:51:46.737654 [debug] [Thread-1 (]: On model.canaza_bi.dim_tipo_cpe: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_tipo_cpe"} */
+drop table if exists "canaza_dw"."marts"."dim_tipo_cpe__dbt_backup" cascade
+[0m21:51:46.741899 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m21:51:46.744468 [debug] [Thread-1 (]: On model.canaza_bi.dim_tipo_cpe: Close
+[0m21:51:46.745867 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa69314e10>]}
+[0m21:51:46.746981 [info ] [Thread-1 (]: 9 of 11 OK created sql table model marts.dim_tipo_cpe .......................... [[32mSELECT 4[0m in 0.10s]
+[0m21:51:46.748452 [debug] [Thread-1 (]: Finished running node model.canaza_bi.dim_tipo_cpe
+[0m21:51:46.750725 [debug] [Thread-1 (]: Began running node model.canaza_bi.dim_entidad
+[0m21:51:46.752324 [info ] [Thread-1 (]: 10 of 11 START sql table model marts.dim_entidad ............................... [RUN]
+[0m21:51:46.753753 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.dim_tipo_cpe, now model.canaza_bi.dim_entidad)
+[0m21:51:46.754753 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.dim_entidad
+[0m21:51:46.758777 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.dim_entidad"
+[0m21:51:46.771741 [debug] [Thread-1 (]: Began executing node model.canaza_bi.dim_entidad
+[0m21:51:46.776586 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.dim_entidad"
+[0m21:51:46.789942 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_entidad"
+[0m21:51:46.791109 [debug] [Thread-1 (]: On model.canaza_bi.dim_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_entidad"} */
+
+  
+    
+
+  create  table "canaza_dw"."marts"."dim_entidad__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    id_entidad                              as entidad_key,
+    e.id_entidad,
+    e.nro_documento,
+    e.denominacion,
+    td.desc_tipo_doc,
+    case
+        when e.cod_tipo_doc = '6' then true
+        else false
+    end                                     as es_empresa
+from "canaza_dw"."staging"."stg_entidad" e
+left join "canaza_dw"."staging"."stg_tipo_documento" td
+    on e.cod_tipo_doc = td.cod_tipo_doc
+  );
+  
+[0m21:51:46.792393 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.816960 [debug] [Thread-1 (]: SQL status: SELECT 2200 in 0.024 seconds
+[0m21:51:46.821654 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_entidad"
+[0m21:51:46.822959 [debug] [Thread-1 (]: On model.canaza_bi.dim_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_entidad"} */
+alter table "canaza_dw"."marts"."dim_entidad" rename to "dim_entidad__dbt_backup"
+[0m21:51:46.824613 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:51:46.830941 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_entidad"
+[0m21:51:46.832210 [debug] [Thread-1 (]: On model.canaza_bi.dim_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_entidad"} */
+alter table "canaza_dw"."marts"."dim_entidad__dbt_tmp" rename to "dim_entidad"
+[0m21:51:46.833904 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m21:51:46.836466 [debug] [Thread-1 (]: On model.canaza_bi.dim_entidad: COMMIT
+[0m21:51:46.837559 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_entidad"
+[0m21:51:46.838482 [debug] [Thread-1 (]: On model.canaza_bi.dim_entidad: COMMIT
+[0m21:51:46.842905 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m21:51:46.846373 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."marts"."dim_entidad__dbt_backup"
+[0m21:51:46.847849 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.dim_entidad"
+[0m21:51:46.848880 [debug] [Thread-1 (]: On model.canaza_bi.dim_entidad: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.dim_entidad"} */
+drop table if exists "canaza_dw"."marts"."dim_entidad__dbt_backup" cascade
+[0m21:51:46.852547 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m21:51:46.855287 [debug] [Thread-1 (]: On model.canaza_bi.dim_entidad: Close
+[0m21:51:46.856909 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa693d9210>]}
+[0m21:51:46.858444 [info ] [Thread-1 (]: 10 of 11 OK created sql table model marts.dim_entidad .......................... [[32mSELECT 2200[0m in 0.10s]
+[0m21:51:46.859694 [debug] [Thread-1 (]: Finished running node model.canaza_bi.dim_entidad
+[0m21:51:46.861993 [debug] [Thread-1 (]: Began running node model.canaza_bi.fact_ventas
+[0m21:51:46.863568 [info ] [Thread-1 (]: 11 of 11 START sql table model marts.fact_ventas ............................... [RUN]
+[0m21:51:46.864968 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.canaza_bi.dim_entidad, now model.canaza_bi.fact_ventas)
+[0m21:51:46.866050 [debug] [Thread-1 (]: Began compiling node model.canaza_bi.fact_ventas
+[0m21:51:46.871430 [debug] [Thread-1 (]: Writing injected SQL for node "model.canaza_bi.fact_ventas"
+[0m21:51:46.883852 [debug] [Thread-1 (]: Began executing node model.canaza_bi.fact_ventas
+[0m21:51:46.888090 [debug] [Thread-1 (]: Writing runtime sql for node "model.canaza_bi.fact_ventas"
+[0m21:51:46.899173 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.fact_ventas"
+[0m21:51:46.900320 [debug] [Thread-1 (]: On model.canaza_bi.fact_ventas: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.fact_ventas"} */
+
+  
+    
+
+  create  table "canaza_dw"."marts"."fact_ventas__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with comprobantes as (
+    select
+        id_comprobante,
+        fecha_emision,
+        cod_tipo_cpe,
+        id_entidad,
+        anulado
+    from "canaza_dw"."staging"."stg_comprobante"
+),
+comprobante_detalles as (
+    select
+        id_detalle,
+        id_comprobante,
+        id_producto,
+        cantidad,
+        precio_unit_sinigv,
+        costo_unit,
+        subtotal_sinigv,
+        igv_linea,
+        subtotal_conigv
+    from "canaza_dw"."staging"."stg_comprobante_detalle"
+),
+dim_fecha as (
+    select
+        fecha_key,
+        fecha
+    from "canaza_dw"."marts"."dim_fecha"
+),
+dim_entidad as (
+    select
+        entidad_key,
+        id_entidad
+    from "canaza_dw"."marts"."dim_entidad"
+),
+dim_producto as (
+    select
+        producto_key,
+        id_producto
+    from "canaza_dw"."marts"."dim_producto"
+),
+dim_tipo_cpe as (
+    select
+        tipo_cpe_key,
+        cod_tipo_cpe
+    from "canaza_dw"."marts"."dim_tipo_cpe"
+)
+
+select
+    df.fecha_key,
+    de.entidad_key,
+    dp.producto_key,
+    dtc.tipo_cpe_key,
+    c.id_comprobante,
+    cd.id_detalle,
+    cd.id_producto,
+    cd.cantidad,
+    cd.precio_unit_sinigv,
+    cd.costo_unit,
+    cd.subtotal_sinigv                                          as venta_bruta,
+    cd.igv_linea,
+    cd.subtotal_conigv                                          as venta_neta,
+    coalesce(cd.costo_unit * cd.cantidad, 0)                    as costo_total,
+    cd.subtotal_sinigv
+        - coalesce(cd.costo_unit * cd.cantidad, 0)              as margen_bruto,
+    case
+        when cd.subtotal_sinigv = 0 then null
+        else (
+            cd.subtotal_sinigv
+            - coalesce(cd.costo_unit * cd.cantidad, 0)
+        ) / cd.subtotal_sinigv
+    end                                                         as pct_margen_bruto,
+    1                                                           as comprobante_count
+from comprobante_detalles cd
+inner join comprobantes c
+    on cd.id_comprobante = c.id_comprobante
+inner join dim_fecha df
+    on c.fecha_emision::date = df.fecha
+inner join dim_entidad de
+    on c.id_entidad = de.id_entidad
+inner join dim_producto dp
+    on cd.id_producto = dp.id_producto
+inner join dim_tipo_cpe dtc
+    on c.cod_tipo_cpe = dtc.cod_tipo_cpe
+  );
+  
+[0m21:51:46.901449 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:51:46.940368 [debug] [Thread-1 (]: SQL status: SELECT 3918 in 0.039 seconds
+[0m21:51:46.944685 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.fact_ventas"
+[0m21:51:46.945871 [debug] [Thread-1 (]: On model.canaza_bi.fact_ventas: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.fact_ventas"} */
+alter table "canaza_dw"."marts"."fact_ventas" rename to "fact_ventas__dbt_backup"
+[0m21:51:46.947383 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:51:46.950808 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.fact_ventas"
+[0m21:51:46.952385 [debug] [Thread-1 (]: On model.canaza_bi.fact_ventas: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.fact_ventas"} */
+alter table "canaza_dw"."marts"."fact_ventas__dbt_tmp" rename to "fact_ventas"
+[0m21:51:46.953959 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:51:46.955829 [debug] [Thread-1 (]: On model.canaza_bi.fact_ventas: COMMIT
+[0m21:51:46.957039 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.fact_ventas"
+[0m21:51:46.958125 [debug] [Thread-1 (]: On model.canaza_bi.fact_ventas: COMMIT
+[0m21:51:46.977762 [debug] [Thread-1 (]: SQL status: COMMIT in 0.018 seconds
+[0m21:51:46.981462 [debug] [Thread-1 (]: Applying DROP to: "canaza_dw"."marts"."fact_ventas__dbt_backup"
+[0m21:51:46.982627 [debug] [Thread-1 (]: Using postgres connection "model.canaza_bi.fact_ventas"
+[0m21:51:46.983822 [debug] [Thread-1 (]: On model.canaza_bi.fact_ventas: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "model.canaza_bi.fact_ventas"} */
+drop table if exists "canaza_dw"."marts"."fact_ventas__dbt_backup" cascade
+[0m21:51:46.989776 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.005 seconds
+[0m21:51:46.991950 [debug] [Thread-1 (]: On model.canaza_bi.fact_ventas: Close
+[0m21:51:46.993932 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5917046-c904-4ccd-be06-5b62ded77c19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa693e4fd0>]}
+[0m21:51:46.995711 [info ] [Thread-1 (]: 11 of 11 OK created sql table model marts.fact_ventas .......................... [[32mSELECT 3918[0m in 0.13s]
+[0m21:51:46.997573 [debug] [Thread-1 (]: Finished running node model.canaza_bi.fact_ventas
+[0m21:51:47.000578 [debug] [MainThread]: On master: COMMIT
+[0m21:51:47.001939 [debug] [MainThread]: Using postgres connection "master"
+[0m21:51:47.002864 [debug] [MainThread]: On master: COMMIT
+[0m21:51:47.003777 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:51:47.014691 [debug] [MainThread]: SQL status: COMMIT in 0.011 seconds
+[0m21:51:47.015990 [debug] [MainThread]: On master: Close
+[0m21:51:47.017313 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:51:47.018145 [debug] [MainThread]: Connection 'model.canaza_bi.fact_ventas' was properly closed.
+[0m21:51:47.019133 [info ] [MainThread]: 
+[0m21:51:47.020223 [info ] [MainThread]: Finished running 5 table models, 6 view models in 0 hours 0 minutes and 1.51 seconds (1.51s).
+[0m21:51:47.023755 [debug] [MainThread]: Command end result
+[0m21:51:47.086299 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/canaza_bi/target/manifest.json
+[0m21:51:47.093919 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/canaza_bi/target/semantic_manifest.json
+[0m21:51:47.106070 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/canaza_bi/target/run_results.json
+[0m21:51:47.107276 [info ] [MainThread]: 
+[0m21:51:47.108506 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:51:47.109626 [info ] [MainThread]: 
+[0m21:51:47.110682 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=11
+[0m21:51:47.113371 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.9470863, "process_in_blocks": "0", "process_kernel_time": 0.755394, "process_mem_max_rss": "131188", "process_out_blocks": "0", "process_user_time": 3.292225}
+[0m21:51:47.114662 [debug] [MainThread]: Command `dbt run` succeeded at 21:51:47.114553 after 2.95 seconds
+[0m21:51:47.115732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa72d27a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6e3a35d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7afa6e3a3e90>]}
+[0m21:51:47.116727 [debug] [MainThread]: Flushing usage events
+[0m21:51:48.104054 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:51:58.503293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034bc843c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034bcb20e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034bcb21190>]}
+
+
+============================== 21:51:58.509686 | c440458e-c421-4a51-9051-530e713b8e29 ==============================
+[0m21:51:58.509686 [info ] [MainThread]: Running with dbt=1.11.8
+[0m21:51:58.511803 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'profiles_dir': '/root/.dbt', 'log_path': '/usr/app/canaza_bi/logs', 'warn_error': 'None', 'log_format': 'default', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt test --select marts', 'empty': 'None', 'fail_fast': 'False', 'partial_parse': 'True', 'no_print': 'None', 'quiet': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'write_json': 'True'}
+[0m21:51:58.750730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c440458e-c421-4a51-9051-530e713b8e29', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034bc841a50>]}
+[0m21:51:58.835866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c440458e-c421-4a51-9051-530e713b8e29', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034bf96d790>]}
+[0m21:51:58.838064 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m21:51:58.970067 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m21:51:59.429852 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:51:59.431563 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:51:59.433002 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:51:59.440864 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.canaza_bi.intermediate
+[0m21:51:59.496755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c440458e-c421-4a51-9051-530e713b8e29', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034ba78fa50>]}
+[0m21:51:59.795091 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/canaza_bi/target/manifest.json
+[0m21:51:59.803747 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/canaza_bi/target/semantic_manifest.json
+[0m21:51:59.841961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c440458e-c421-4a51-9051-530e713b8e29', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034bbbe6bd0>]}
+[0m21:51:59.843454 [info ] [MainThread]: Found 12 models, 33 data tests, 466 macros
+[0m21:51:59.845190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c440458e-c421-4a51-9051-530e713b8e29', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034bbb31290>]}
+[0m21:51:59.850751 [info ] [MainThread]: 
+[0m21:51:59.852470 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:51:59.853844 [info ] [MainThread]: 
+[0m21:51:59.855508 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:51:59.863097 [debug] [ThreadPool]: Acquiring new postgres connection 'list_canaza_dw_staging'
+[0m21:51:59.909505 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw_staging"
+[0m21:51:59.911178 [debug] [ThreadPool]: On list_canaza_dw_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw_staging"} */
+select
+      'canaza_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'staging'
+    union all
+    select
+      'canaza_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'staging'
+    union all
+    select
+      'canaza_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'staging'
+  
+[0m21:51:59.912580 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:51:59.930034 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.017 seconds
+[0m21:51:59.933087 [debug] [ThreadPool]: On list_canaza_dw_staging: ROLLBACK
+[0m21:51:59.934490 [debug] [ThreadPool]: On list_canaza_dw_staging: Close
+[0m21:51:59.936039 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_canaza_dw_staging, now list_canaza_dw_marts)
+[0m21:51:59.940116 [debug] [ThreadPool]: Using postgres connection "list_canaza_dw_marts"
+[0m21:51:59.941415 [debug] [ThreadPool]: On list_canaza_dw_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "list_canaza_dw_marts"} */
+select
+      'canaza_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts'
+    union all
+    select
+      'canaza_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts'
+    union all
+    select
+      'canaza_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts'
+  
+[0m21:51:59.942486 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:51:59.956362 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.014 seconds
+[0m21:51:59.958876 [debug] [ThreadPool]: On list_canaza_dw_marts: ROLLBACK
+[0m21:51:59.960642 [debug] [ThreadPool]: On list_canaza_dw_marts: Close
+[0m21:51:59.968179 [debug] [MainThread]: Using postgres connection "master"
+[0m21:51:59.969623 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m21:51:59.971450 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:51:59.988841 [debug] [MainThread]: SQL status: SELECT 15 in 0.017 seconds
+[0m21:51:59.992292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c440458e-c421-4a51-9051-530e713b8e29', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034bcf5bd90>]}
+[0m21:51:59.993825 [debug] [MainThread]: On master: ROLLBACK
+[0m21:51:59.995212 [debug] [MainThread]: On master: COMMIT
+[0m21:51:59.996195 [debug] [MainThread]: Using postgres connection "master"
+[0m21:51:59.997061 [debug] [MainThread]: On master: COMMIT
+[0m21:51:59.998462 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m21:51:59.999559 [debug] [MainThread]: On master: Close
+[0m21:52:00.004458 [debug] [Thread-1 (]: Began running node test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db
+[0m21:52:00.005792 [info ] [Thread-1 (]: 1 of 33 START test accepted_values_fact_ventas_comprobante_count__1 ............ [RUN]
+[0m21:52:00.007532 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_canaza_dw_marts, now test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db)
+[0m21:52:00.009441 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db
+[0m21:52:00.028328 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db"
+[0m21:52:00.044371 [debug] [Thread-1 (]: Began executing node test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db
+[0m21:52:00.065731 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db"
+[0m21:52:00.087087 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db"
+[0m21:52:00.088614 [debug] [Thread-1 (]: On test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        comprobante_count as value_field,
+        count(*) as n_records
+
+    from "canaza_dw"."marts"."fact_ventas"
+    group by comprobante_count
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '1'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.089780 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.102977 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m21:52:00.108502 [debug] [Thread-1 (]: On test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db: ROLLBACK
+[0m21:52:00.110571 [debug] [Thread-1 (]: On test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db: Close
+[0m21:52:00.112408 [info ] [Thread-1 (]: 1 of 33 PASS accepted_values_fact_ventas_comprobante_count__1 .................. [[32mPASS[0m in 0.10s]
+[0m21:52:00.113986 [debug] [Thread-1 (]: Finished running node test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db
+[0m21:52:00.115323 [debug] [Thread-1 (]: Began running node test.canaza_bi.fact_ventas_grain
+[0m21:52:00.116727 [info ] [Thread-1 (]: 2 of 33 START test fact_ventas_grain ........................................... [RUN]
+[0m21:52:00.118276 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.accepted_values_fact_ventas_comprobante_count__1.4a047540db, now test.canaza_bi.fact_ventas_grain)
+[0m21:52:00.119480 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.fact_ventas_grain
+[0m21:52:00.124161 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.fact_ventas_grain"
+[0m21:52:00.135081 [debug] [Thread-1 (]: Began executing node test.canaza_bi.fact_ventas_grain
+[0m21:52:00.139028 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.fact_ventas_grain"
+[0m21:52:00.149678 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.fact_ventas_grain"
+[0m21:52:00.150917 [debug] [Thread-1 (]: On test.canaza_bi.fact_ventas_grain: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.fact_ventas_grain"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    id_detalle,
+    count(*) as repeticiones
+from "canaza_dw"."marts"."fact_ventas"
+group by id_detalle
+having count(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.152410 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.167577 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m21:52:00.170177 [debug] [Thread-1 (]: On test.canaza_bi.fact_ventas_grain: ROLLBACK
+[0m21:52:00.171767 [debug] [Thread-1 (]: On test.canaza_bi.fact_ventas_grain: Close
+[0m21:52:00.173862 [info ] [Thread-1 (]: 2 of 33 PASS fact_ventas_grain ................................................. [[32mPASS[0m in 0.06s]
+[0m21:52:00.175634 [debug] [Thread-1 (]: Finished running node test.canaza_bi.fact_ventas_grain
+[0m21:52:00.177041 [debug] [Thread-1 (]: Began running node test.canaza_bi.fact_ventas_metricas
+[0m21:52:00.178252 [info ] [Thread-1 (]: 3 of 33 START test fact_ventas_metricas ........................................ [RUN]
+[0m21:52:00.180052 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.fact_ventas_grain, now test.canaza_bi.fact_ventas_metricas)
+[0m21:52:00.181308 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.fact_ventas_metricas
+[0m21:52:00.187484 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.fact_ventas_metricas"
+[0m21:52:00.200309 [debug] [Thread-1 (]: Began executing node test.canaza_bi.fact_ventas_metricas
+[0m21:52:00.203665 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.fact_ventas_metricas"
+[0m21:52:00.213973 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.fact_ventas_metricas"
+[0m21:52:00.215957 [debug] [Thread-1 (]: On test.canaza_bi.fact_ventas_metricas: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.fact_ventas_metricas"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select *
+from "canaza_dw"."marts"."fact_ventas"
+where margen_bruto <> venta_bruta - costo_total
+   or cantidad < 0
+   or venta_bruta < 0
+   or venta_neta < 0
+   or costo_total < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.217357 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.230855 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m21:52:00.234322 [debug] [Thread-1 (]: On test.canaza_bi.fact_ventas_metricas: ROLLBACK
+[0m21:52:00.236213 [debug] [Thread-1 (]: On test.canaza_bi.fact_ventas_metricas: Close
+[0m21:52:00.237848 [info ] [Thread-1 (]: 3 of 33 PASS fact_ventas_metricas .............................................. [[32mPASS[0m in 0.06s]
+[0m21:52:00.239617 [debug] [Thread-1 (]: Finished running node test.canaza_bi.fact_ventas_metricas
+[0m21:52:00.241038 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99
+[0m21:52:00.242352 [info ] [Thread-1 (]: 4 of 33 START test not_null_dim_entidad_entidad_key ............................ [RUN]
+[0m21:52:00.243772 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.fact_ventas_metricas, now test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99)
+[0m21:52:00.245508 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99
+[0m21:52:00.253460 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99"
+[0m21:52:00.270259 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99
+[0m21:52:00.274021 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99"
+[0m21:52:00.286869 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99"
+[0m21:52:00.288083 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select entidad_key
+from "canaza_dw"."marts"."dim_entidad"
+where entidad_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.289302 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.301601 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m21:52:00.304784 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99: ROLLBACK
+[0m21:52:00.306186 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99: Close
+[0m21:52:00.307504 [info ] [Thread-1 (]: 4 of 33 PASS not_null_dim_entidad_entidad_key .................................. [[32mPASS[0m in 0.06s]
+[0m21:52:00.308862 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99
+[0m21:52:00.310348 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06
+[0m21:52:00.312093 [info ] [Thread-1 (]: 5 of 33 START test not_null_dim_entidad_id_entidad ............................. [RUN]
+[0m21:52:00.313501 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_dim_entidad_entidad_key.53c3461a99, now test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06)
+[0m21:52:00.314501 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06
+[0m21:52:00.320131 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06"
+[0m21:52:00.338182 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06
+[0m21:52:00.342115 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06"
+[0m21:52:00.355975 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06"
+[0m21:52:00.357074 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_entidad
+from "canaza_dw"."marts"."dim_entidad"
+where id_entidad is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.358130 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.370320 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m21:52:00.373252 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06: ROLLBACK
+[0m21:52:00.374718 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06: Close
+[0m21:52:00.376233 [info ] [Thread-1 (]: 5 of 33 PASS not_null_dim_entidad_id_entidad ................................... [[32mPASS[0m in 0.06s]
+[0m21:52:00.377797 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06
+[0m21:52:00.380274 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6
+[0m21:52:00.381937 [info ] [Thread-1 (]: 6 of 33 START test not_null_dim_fecha_fecha .................................... [RUN]
+[0m21:52:00.383392 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_dim_entidad_id_entidad.0daac2cb06, now test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6)
+[0m21:52:00.384551 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6
+[0m21:52:00.389842 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6"
+[0m21:52:00.403131 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6
+[0m21:52:00.406414 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6"
+[0m21:52:00.419325 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6"
+[0m21:52:00.420477 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fecha
+from "canaza_dw"."marts"."dim_fecha"
+where fecha is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.421457 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.432755 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:00.435662 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6: ROLLBACK
+[0m21:52:00.437252 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6: Close
+[0m21:52:00.438657 [info ] [Thread-1 (]: 6 of 33 PASS not_null_dim_fecha_fecha .......................................... [[32mPASS[0m in 0.06s]
+[0m21:52:00.440160 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6
+[0m21:52:00.441390 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893
+[0m21:52:00.442775 [info ] [Thread-1 (]: 7 of 33 START test not_null_dim_fecha_fecha_key ................................ [RUN]
+[0m21:52:00.444089 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_dim_fecha_fecha.10aa6b8bf6, now test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893)
+[0m21:52:00.445545 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893
+[0m21:52:00.450680 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893"
+[0m21:52:00.478283 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893
+[0m21:52:00.481502 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893"
+[0m21:52:00.496322 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893"
+[0m21:52:00.497774 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fecha_key
+from "canaza_dw"."marts"."dim_fecha"
+where fecha_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.498895 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.510355 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:00.513302 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893: ROLLBACK
+[0m21:52:00.514922 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893: Close
+[0m21:52:00.516392 [info ] [Thread-1 (]: 7 of 33 PASS not_null_dim_fecha_fecha_key ...................................... [[32mPASS[0m in 0.07s]
+[0m21:52:00.517701 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893
+[0m21:52:00.519475 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7
+[0m21:52:00.520721 [info ] [Thread-1 (]: 8 of 33 START test not_null_dim_producto_id_producto ........................... [RUN]
+[0m21:52:00.522292 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_dim_fecha_fecha_key.87ee199893, now test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7)
+[0m21:52:00.523402 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7
+[0m21:52:00.528254 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7"
+[0m21:52:00.541040 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7
+[0m21:52:00.546585 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7"
+[0m21:52:00.559016 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7"
+[0m21:52:00.560594 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_producto
+from "canaza_dw"."marts"."dim_producto"
+where id_producto is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.561698 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.572480 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:00.575503 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7: ROLLBACK
+[0m21:52:00.576787 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7: Close
+[0m21:52:00.577974 [info ] [Thread-1 (]: 8 of 33 PASS not_null_dim_producto_id_producto ................................. [[32mPASS[0m in 0.06s]
+[0m21:52:00.579555 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7
+[0m21:52:00.580835 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2
+[0m21:52:00.582138 [info ] [Thread-1 (]: 9 of 33 START test not_null_dim_producto_producto_key .......................... [RUN]
+[0m21:52:00.583374 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_dim_producto_id_producto.6e23cab3c7, now test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2)
+[0m21:52:00.584918 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2
+[0m21:52:00.590296 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2"
+[0m21:52:00.606913 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2
+[0m21:52:00.610982 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2"
+[0m21:52:00.623062 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2"
+[0m21:52:00.624544 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select producto_key
+from "canaza_dw"."marts"."dim_producto"
+where producto_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.625781 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.638828 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m21:52:00.641074 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2: ROLLBACK
+[0m21:52:00.643041 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2: Close
+[0m21:52:00.644650 [info ] [Thread-1 (]: 9 of 33 PASS not_null_dim_producto_producto_key ................................ [[32mPASS[0m in 0.06s]
+[0m21:52:00.646183 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2
+[0m21:52:00.647407 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f
+[0m21:52:00.648748 [info ] [Thread-1 (]: 10 of 33 START test not_null_dim_tipo_cpe_cod_tipo_cpe ......................... [RUN]
+[0m21:52:00.650820 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_dim_producto_producto_key.1505c754b2, now test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f)
+[0m21:52:00.652386 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f
+[0m21:52:00.658419 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f"
+[0m21:52:00.671852 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f
+[0m21:52:00.675159 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f"
+[0m21:52:00.688199 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f"
+[0m21:52:00.689338 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cod_tipo_cpe
+from "canaza_dw"."marts"."dim_tipo_cpe"
+where cod_tipo_cpe is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.690412 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.700806 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m21:52:00.706458 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f: ROLLBACK
+[0m21:52:00.708126 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f: Close
+[0m21:52:00.709555 [info ] [Thread-1 (]: 10 of 33 PASS not_null_dim_tipo_cpe_cod_tipo_cpe ............................... [[32mPASS[0m in 0.06s]
+[0m21:52:00.711166 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f
+[0m21:52:00.713254 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f
+[0m21:52:00.714793 [info ] [Thread-1 (]: 11 of 33 START test not_null_dim_tipo_cpe_tipo_cpe_key ......................... [RUN]
+[0m21:52:00.716424 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_dim_tipo_cpe_cod_tipo_cpe.814b059e9f, now test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f)
+[0m21:52:00.717463 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f
+[0m21:52:00.722732 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f"
+[0m21:52:00.734724 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f
+[0m21:52:00.737977 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f"
+[0m21:52:00.753377 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f"
+[0m21:52:00.754706 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tipo_cpe_key
+from "canaza_dw"."marts"."dim_tipo_cpe"
+where tipo_cpe_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.755824 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.766401 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m21:52:00.769617 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f: ROLLBACK
+[0m21:52:00.770947 [debug] [Thread-1 (]: On test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f: Close
+[0m21:52:00.772539 [info ] [Thread-1 (]: 11 of 33 PASS not_null_dim_tipo_cpe_tipo_cpe_key ............................... [[32mPASS[0m in 0.06s]
+[0m21:52:00.774108 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f
+[0m21:52:00.775804 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412
+[0m21:52:00.776995 [info ] [Thread-1 (]: 12 of 33 START test not_null_fact_ventas_cantidad .............................. [RUN]
+[0m21:52:00.778140 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_dim_tipo_cpe_tipo_cpe_key.b2f15eee8f, now test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412)
+[0m21:52:00.779148 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412
+[0m21:52:00.784255 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412"
+[0m21:52:00.797104 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412
+[0m21:52:00.800244 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412"
+[0m21:52:00.815509 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412"
+[0m21:52:00.816718 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cantidad
+from "canaza_dw"."marts"."fact_ventas"
+where cantidad is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.817874 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.830267 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m21:52:00.832754 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412: ROLLBACK
+[0m21:52:00.834082 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412: Close
+[0m21:52:00.835436 [info ] [Thread-1 (]: 12 of 33 PASS not_null_fact_ventas_cantidad .................................... [[32mPASS[0m in 0.06s]
+[0m21:52:00.837664 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412
+[0m21:52:00.839045 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487
+[0m21:52:00.840268 [info ] [Thread-1 (]: 13 of 33 START test not_null_fact_ventas_comprobante_count ..................... [RUN]
+[0m21:52:00.841546 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_cantidad.cc2d624412, now test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487)
+[0m21:52:00.842493 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487
+[0m21:52:00.847661 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487"
+[0m21:52:00.861093 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487
+[0m21:52:00.866545 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487"
+[0m21:52:00.879209 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487"
+[0m21:52:00.880595 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select comprobante_count
+from "canaza_dw"."marts"."fact_ventas"
+where comprobante_count is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.881544 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.892830 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:00.895300 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487: ROLLBACK
+[0m21:52:00.896663 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487: Close
+[0m21:52:00.897806 [info ] [Thread-1 (]: 13 of 33 PASS not_null_fact_ventas_comprobante_count ........................... [[32mPASS[0m in 0.06s]
+[0m21:52:00.899795 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487
+[0m21:52:00.901157 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8
+[0m21:52:00.902182 [info ] [Thread-1 (]: 14 of 33 START test not_null_fact_ventas_entidad_key ........................... [RUN]
+[0m21:52:00.903377 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_comprobante_count.f702de7487, now test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8)
+[0m21:52:00.904311 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8
+[0m21:52:00.909229 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8"
+[0m21:52:00.921957 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8
+[0m21:52:00.925326 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8"
+[0m21:52:00.938307 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8"
+[0m21:52:00.939274 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select entidad_key
+from "canaza_dw"."marts"."fact_ventas"
+where entidad_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:00.940197 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:00.956050 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m21:52:00.958282 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8: ROLLBACK
+[0m21:52:00.959842 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8: Close
+[0m21:52:00.961507 [info ] [Thread-1 (]: 14 of 33 PASS not_null_fact_ventas_entidad_key ................................. [[32mPASS[0m in 0.06s]
+[0m21:52:00.963483 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8
+[0m21:52:00.965466 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67
+[0m21:52:00.966739 [info ] [Thread-1 (]: 15 of 33 START test not_null_fact_ventas_fecha_key ............................. [RUN]
+[0m21:52:00.968069 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_entidad_key.86b00762e8, now test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67)
+[0m21:52:00.969614 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67
+[0m21:52:00.974160 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67"
+[0m21:52:00.986077 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67
+[0m21:52:00.989128 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67"
+[0m21:52:01.000194 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67"
+[0m21:52:01.001206 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fecha_key
+from "canaza_dw"."marts"."fact_ventas"
+where fecha_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.002003 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.016232 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m21:52:01.019012 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67: ROLLBACK
+[0m21:52:01.020452 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67: Close
+[0m21:52:01.022179 [info ] [Thread-1 (]: 15 of 33 PASS not_null_fact_ventas_fecha_key ................................... [[32mPASS[0m in 0.05s]
+[0m21:52:01.023616 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67
+[0m21:52:01.025153 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef
+[0m21:52:01.026251 [info ] [Thread-1 (]: 16 of 33 START test not_null_fact_ventas_id_comprobante ........................ [RUN]
+[0m21:52:01.027561 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_fecha_key.92d29eef67, now test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef)
+[0m21:52:01.028845 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef
+[0m21:52:01.034825 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef"
+[0m21:52:01.047638 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef
+[0m21:52:01.050911 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef"
+[0m21:52:01.062898 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef"
+[0m21:52:01.064076 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_comprobante
+from "canaza_dw"."marts"."fact_ventas"
+where id_comprobante is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.065114 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.079055 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m21:52:01.081616 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef: ROLLBACK
+[0m21:52:01.083036 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef: Close
+[0m21:52:01.084519 [info ] [Thread-1 (]: 16 of 33 PASS not_null_fact_ventas_id_comprobante .............................. [[32mPASS[0m in 0.06s]
+[0m21:52:01.085833 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef
+[0m21:52:01.087567 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c
+[0m21:52:01.088924 [info ] [Thread-1 (]: 17 of 33 START test not_null_fact_ventas_id_detalle ............................ [RUN]
+[0m21:52:01.090304 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_id_comprobante.db1557f5ef, now test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c)
+[0m21:52:01.091254 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c
+[0m21:52:01.096157 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c"
+[0m21:52:01.112212 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c
+[0m21:52:01.116127 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c"
+[0m21:52:01.130185 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c"
+[0m21:52:01.131411 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_detalle
+from "canaza_dw"."marts"."fact_ventas"
+where id_detalle is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.132437 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.143573 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:01.146058 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c: ROLLBACK
+[0m21:52:01.147463 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c: Close
+[0m21:52:01.149215 [info ] [Thread-1 (]: 17 of 33 PASS not_null_fact_ventas_id_detalle .................................. [[32mPASS[0m in 0.06s]
+[0m21:52:01.150856 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c
+[0m21:52:01.152081 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0
+[0m21:52:01.153232 [info ] [Thread-1 (]: 18 of 33 START test not_null_fact_ventas_id_producto ........................... [RUN]
+[0m21:52:01.154416 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_id_detalle.5bf4b3216c, now test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0)
+[0m21:52:01.155317 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0
+[0m21:52:01.160871 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0"
+[0m21:52:01.179783 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0
+[0m21:52:01.183387 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0"
+[0m21:52:01.195185 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0"
+[0m21:52:01.196392 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id_producto
+from "canaza_dw"."marts"."fact_ventas"
+where id_producto is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.197564 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.209949 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m21:52:01.213463 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0: ROLLBACK
+[0m21:52:01.215679 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0: Close
+[0m21:52:01.217166 [info ] [Thread-1 (]: 18 of 33 PASS not_null_fact_ventas_id_producto ................................. [[32mPASS[0m in 0.06s]
+[0m21:52:01.218555 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0
+[0m21:52:01.220116 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c
+[0m21:52:01.221406 [info ] [Thread-1 (]: 19 of 33 START test not_null_fact_ventas_producto_key .......................... [RUN]
+[0m21:52:01.222666 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_id_producto.c18e70eeb0, now test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c)
+[0m21:52:01.224394 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c
+[0m21:52:01.231026 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c"
+[0m21:52:01.251734 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c
+[0m21:52:01.258251 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c"
+[0m21:52:01.274095 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c"
+[0m21:52:01.275750 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select producto_key
+from "canaza_dw"."marts"."fact_ventas"
+where producto_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.277502 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.289224 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m21:52:01.291702 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c: ROLLBACK
+[0m21:52:01.293159 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c: Close
+[0m21:52:01.294746 [info ] [Thread-1 (]: 19 of 33 PASS not_null_fact_ventas_producto_key ................................ [[32mPASS[0m in 0.07s]
+[0m21:52:01.296486 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c
+[0m21:52:01.297787 [debug] [Thread-1 (]: Began running node test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0
+[0m21:52:01.298772 [info ] [Thread-1 (]: 20 of 33 START test not_null_fact_ventas_tipo_cpe_key .......................... [RUN]
+[0m21:52:01.300196 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_producto_key.d068bd5a2c, now test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0)
+[0m21:52:01.301192 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0
+[0m21:52:01.306074 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0"
+[0m21:52:01.317853 [debug] [Thread-1 (]: Began executing node test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0
+[0m21:52:01.321177 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0"
+[0m21:52:01.338080 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0"
+[0m21:52:01.339260 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tipo_cpe_key
+from "canaza_dw"."marts"."fact_ventas"
+where tipo_cpe_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.340584 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.351330 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:01.353640 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0: ROLLBACK
+[0m21:52:01.355265 [debug] [Thread-1 (]: On test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0: Close
+[0m21:52:01.356908 [info ] [Thread-1 (]: 20 of 33 PASS not_null_fact_ventas_tipo_cpe_key ................................ [[32mPASS[0m in 0.06s]
+[0m21:52:01.358914 [debug] [Thread-1 (]: Finished running node test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0
+[0m21:52:01.360299 [debug] [Thread-1 (]: Began running node test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263
+[0m21:52:01.361410 [info ] [Thread-1 (]: 21 of 33 START test relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_  [RUN]
+[0m21:52:01.362569 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.not_null_fact_ventas_tipo_cpe_key.aa9ec1c0d0, now test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263)
+[0m21:52:01.363537 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263
+[0m21:52:01.371834 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263"
+[0m21:52:01.384111 [debug] [Thread-1 (]: Began executing node test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263
+[0m21:52:01.387359 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263"
+[0m21:52:01.398298 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263"
+[0m21:52:01.399840 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select entidad_key as from_field
+    from "canaza_dw"."marts"."fact_ventas"
+    where entidad_key is not null
+),
+
+parent as (
+    select entidad_key as to_field
+    from "canaza_dw"."marts"."dim_entidad"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.400994 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.414324 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m21:52:01.417004 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263: ROLLBACK
+[0m21:52:01.418139 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263: Close
+[0m21:52:01.419269 [info ] [Thread-1 (]: 21 of 33 PASS relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_  [[32mPASS[0m in 0.06s]
+[0m21:52:01.421144 [debug] [Thread-1 (]: Finished running node test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263
+[0m21:52:01.422191 [debug] [Thread-1 (]: Began running node test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791
+[0m21:52:01.423161 [info ] [Thread-1 (]: 22 of 33 START test relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_  [RUN]
+[0m21:52:01.424340 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.relationships_fact_ventas_entidad_key__entidad_key__ref_dim_entidad_.db01036263, now test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791)
+[0m21:52:01.425237 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791
+[0m21:52:01.430804 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791"
+[0m21:52:01.443486 [debug] [Thread-1 (]: Began executing node test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791
+[0m21:52:01.446536 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791"
+[0m21:52:01.459062 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791"
+[0m21:52:01.460258 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select fecha_key as from_field
+    from "canaza_dw"."marts"."fact_ventas"
+    where fecha_key is not null
+),
+
+parent as (
+    select fecha_key as to_field
+    from "canaza_dw"."marts"."dim_fecha"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.461640 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.473086 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:01.475736 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791: ROLLBACK
+[0m21:52:01.477078 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791: Close
+[0m21:52:01.478410 [info ] [Thread-1 (]: 22 of 33 PASS relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_ ... [[32mPASS[0m in 0.05s]
+[0m21:52:01.479727 [debug] [Thread-1 (]: Finished running node test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791
+[0m21:52:01.480780 [debug] [Thread-1 (]: Began running node test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98
+[0m21:52:01.481804 [info ] [Thread-1 (]: 23 of 33 START test relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_  [RUN]
+[0m21:52:01.483259 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.relationships_fact_ventas_fecha_key__fecha_key__ref_dim_fecha_.b15a4f6791, now test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98)
+[0m21:52:01.484502 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98
+[0m21:52:01.490234 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98"
+[0m21:52:01.502842 [debug] [Thread-1 (]: Began executing node test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98
+[0m21:52:01.506084 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98"
+[0m21:52:01.518327 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98"
+[0m21:52:01.519470 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select producto_key as from_field
+    from "canaza_dw"."marts"."fact_ventas"
+    where producto_key is not null
+),
+
+parent as (
+    select producto_key as to_field
+    from "canaza_dw"."marts"."dim_producto"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.520711 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.532637 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m21:52:01.534777 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98: ROLLBACK
+[0m21:52:01.536301 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98: Close
+[0m21:52:01.537765 [info ] [Thread-1 (]: 23 of 33 PASS relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_  [[32mPASS[0m in 0.05s]
+[0m21:52:01.539010 [debug] [Thread-1 (]: Finished running node test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98
+[0m21:52:01.540131 [debug] [Thread-1 (]: Began running node test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4
+[0m21:52:01.541217 [info ] [Thread-1 (]: 24 of 33 START test relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_  [RUN]
+[0m21:52:01.542301 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.relationships_fact_ventas_producto_key__producto_key__ref_dim_producto_.4895e3cf98, now test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4)
+[0m21:52:01.543164 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4
+[0m21:52:01.549571 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4"
+[0m21:52:01.561211 [debug] [Thread-1 (]: Began executing node test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4
+[0m21:52:01.566377 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4"
+[0m21:52:01.577561 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4"
+[0m21:52:01.578543 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select tipo_cpe_key as from_field
+    from "canaza_dw"."marts"."fact_ventas"
+    where tipo_cpe_key is not null
+),
+
+parent as (
+    select tipo_cpe_key as to_field
+    from "canaza_dw"."marts"."dim_tipo_cpe"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.579664 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.590256 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m21:52:01.593223 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4: ROLLBACK
+[0m21:52:01.594675 [debug] [Thread-1 (]: On test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4: Close
+[0m21:52:01.596310 [info ] [Thread-1 (]: 24 of 33 PASS relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_  [[32mPASS[0m in 0.05s]
+[0m21:52:01.597738 [debug] [Thread-1 (]: Finished running node test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4
+[0m21:52:01.598987 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a
+[0m21:52:01.600381 [info ] [Thread-1 (]: 25 of 33 START test unique_dim_entidad_entidad_key ............................. [RUN]
+[0m21:52:01.601805 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.relationships_fact_ventas_tipo_cpe_key__tipo_cpe_key__ref_dim_tipo_cpe_.2b9e7c13a4, now test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a)
+[0m21:52:01.603026 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a
+[0m21:52:01.609940 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a"
+[0m21:52:01.621496 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a
+[0m21:52:01.624983 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a"
+[0m21:52:01.646290 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a"
+[0m21:52:01.647619 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    entidad_key as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."dim_entidad"
+where entidad_key is not null
+group by entidad_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.648709 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.659980 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:01.664143 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a: ROLLBACK
+[0m21:52:01.665461 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a: Close
+[0m21:52:01.666648 [info ] [Thread-1 (]: 25 of 33 PASS unique_dim_entidad_entidad_key ................................... [[32mPASS[0m in 0.06s]
+[0m21:52:01.668166 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a
+[0m21:52:01.669239 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85
+[0m21:52:01.670329 [info ] [Thread-1 (]: 26 of 33 START test unique_dim_entidad_id_entidad .............................. [RUN]
+[0m21:52:01.671687 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.unique_dim_entidad_entidad_key.83db49246a, now test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85)
+[0m21:52:01.672791 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85
+[0m21:52:01.677157 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85"
+[0m21:52:01.688653 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85
+[0m21:52:01.692709 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85"
+[0m21:52:01.706145 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85"
+[0m21:52:01.707289 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_entidad as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."dim_entidad"
+where id_entidad is not null
+group by id_entidad
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.708493 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.720652 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m21:52:01.722977 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85: ROLLBACK
+[0m21:52:01.724533 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85: Close
+[0m21:52:01.725815 [info ] [Thread-1 (]: 26 of 33 PASS unique_dim_entidad_id_entidad .................................... [[32mPASS[0m in 0.05s]
+[0m21:52:01.727329 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85
+[0m21:52:01.728614 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_dim_fecha_fecha.b997263365
+[0m21:52:01.729693 [info ] [Thread-1 (]: 27 of 33 START test unique_dim_fecha_fecha ..................................... [RUN]
+[0m21:52:01.730847 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.unique_dim_entidad_id_entidad.1c98b43f85, now test.canaza_bi.unique_dim_fecha_fecha.b997263365)
+[0m21:52:01.732032 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_dim_fecha_fecha.b997263365
+[0m21:52:01.737159 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_dim_fecha_fecha.b997263365"
+[0m21:52:01.749106 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_dim_fecha_fecha.b997263365
+[0m21:52:01.752101 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_dim_fecha_fecha.b997263365"
+[0m21:52:01.764152 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_dim_fecha_fecha.b997263365"
+[0m21:52:01.765108 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_fecha_fecha.b997263365: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_dim_fecha_fecha.b997263365"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    fecha as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."dim_fecha"
+where fecha is not null
+group by fecha
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.766181 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.776754 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:01.779154 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_fecha_fecha.b997263365: ROLLBACK
+[0m21:52:01.780662 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_fecha_fecha.b997263365: Close
+[0m21:52:01.782263 [info ] [Thread-1 (]: 27 of 33 PASS unique_dim_fecha_fecha ........................................... [[32mPASS[0m in 0.05s]
+[0m21:52:01.784070 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_dim_fecha_fecha.b997263365
+[0m21:52:01.785631 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd
+[0m21:52:01.786649 [info ] [Thread-1 (]: 28 of 33 START test unique_dim_fecha_fecha_key ................................. [RUN]
+[0m21:52:01.788482 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.unique_dim_fecha_fecha.b997263365, now test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd)
+[0m21:52:01.789660 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd
+[0m21:52:01.793995 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd"
+[0m21:52:01.805302 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd
+[0m21:52:01.808566 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd"
+[0m21:52:01.819780 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd"
+[0m21:52:01.820790 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    fecha_key as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."dim_fecha"
+where fecha_key is not null
+group by fecha_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.821820 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.832547 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:01.836301 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd: ROLLBACK
+[0m21:52:01.837577 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd: Close
+[0m21:52:01.838772 [info ] [Thread-1 (]: 28 of 33 PASS unique_dim_fecha_fecha_key ....................................... [[32mPASS[0m in 0.05s]
+[0m21:52:01.840205 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd
+[0m21:52:01.841208 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd
+[0m21:52:01.842167 [info ] [Thread-1 (]: 29 of 33 START test unique_dim_producto_id_producto ............................ [RUN]
+[0m21:52:01.843426 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.unique_dim_fecha_fecha_key.314389aacd, now test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd)
+[0m21:52:01.844459 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd
+[0m21:52:01.848670 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd"
+[0m21:52:01.859495 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd
+[0m21:52:01.865012 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd"
+[0m21:52:01.881765 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd"
+[0m21:52:01.882928 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_producto as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."dim_producto"
+where id_producto is not null
+group by id_producto
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.883688 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.895203 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m21:52:01.897689 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd: ROLLBACK
+[0m21:52:01.899092 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd: Close
+[0m21:52:01.900863 [info ] [Thread-1 (]: 29 of 33 PASS unique_dim_producto_id_producto .................................. [[32mPASS[0m in 0.06s]
+[0m21:52:01.902041 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd
+[0m21:52:01.903296 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_dim_producto_producto_key.dd24a25833
+[0m21:52:01.904298 [info ] [Thread-1 (]: 30 of 33 START test unique_dim_producto_producto_key ........................... [RUN]
+[0m21:52:01.905925 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.unique_dim_producto_id_producto.e91fcbeadd, now test.canaza_bi.unique_dim_producto_producto_key.dd24a25833)
+[0m21:52:01.907187 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_dim_producto_producto_key.dd24a25833
+[0m21:52:01.911381 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_dim_producto_producto_key.dd24a25833"
+[0m21:52:01.922137 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_dim_producto_producto_key.dd24a25833
+[0m21:52:01.926312 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_dim_producto_producto_key.dd24a25833"
+[0m21:52:01.937274 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_dim_producto_producto_key.dd24a25833"
+[0m21:52:01.938302 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_producto_producto_key.dd24a25833: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_dim_producto_producto_key.dd24a25833"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    producto_key as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."dim_producto"
+where producto_key is not null
+group by producto_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.939117 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:01.952111 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m21:52:01.954714 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_producto_producto_key.dd24a25833: ROLLBACK
+[0m21:52:01.956118 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_producto_producto_key.dd24a25833: Close
+[0m21:52:01.957325 [info ] [Thread-1 (]: 30 of 33 PASS unique_dim_producto_producto_key ................................. [[32mPASS[0m in 0.05s]
+[0m21:52:01.958778 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_dim_producto_producto_key.dd24a25833
+[0m21:52:01.960005 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8
+[0m21:52:01.961090 [info ] [Thread-1 (]: 31 of 33 START test unique_dim_tipo_cpe_cod_tipo_cpe ........................... [RUN]
+[0m21:52:01.962367 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.unique_dim_producto_producto_key.dd24a25833, now test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8)
+[0m21:52:01.963438 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8
+[0m21:52:01.968469 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8"
+[0m21:52:01.980672 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8
+[0m21:52:01.984175 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8"
+[0m21:52:01.996172 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8"
+[0m21:52:01.997339 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    cod_tipo_cpe as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."dim_tipo_cpe"
+where cod_tipo_cpe is not null
+group by cod_tipo_cpe
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:01.998442 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:02.012573 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m21:52:02.015123 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8: ROLLBACK
+[0m21:52:02.016973 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8: Close
+[0m21:52:02.018595 [info ] [Thread-1 (]: 31 of 33 PASS unique_dim_tipo_cpe_cod_tipo_cpe ................................. [[32mPASS[0m in 0.06s]
+[0m21:52:02.020170 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8
+[0m21:52:02.021122 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc
+[0m21:52:02.022051 [info ] [Thread-1 (]: 32 of 33 START test unique_dim_tipo_cpe_tipo_cpe_key ........................... [RUN]
+[0m21:52:02.023404 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.unique_dim_tipo_cpe_cod_tipo_cpe.fb49faacc8, now test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc)
+[0m21:52:02.024685 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc
+[0m21:52:02.028896 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc"
+[0m21:52:02.043573 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc
+[0m21:52:02.046754 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc"
+[0m21:52:02.058717 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc"
+[0m21:52:02.059839 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    tipo_cpe_key as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."dim_tipo_cpe"
+where tipo_cpe_key is not null
+group by tipo_cpe_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:02.060857 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:02.071209 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m21:52:02.073557 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc: ROLLBACK
+[0m21:52:02.074904 [debug] [Thread-1 (]: On test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc: Close
+[0m21:52:02.076227 [info ] [Thread-1 (]: 32 of 33 PASS unique_dim_tipo_cpe_tipo_cpe_key ................................. [[32mPASS[0m in 0.05s]
+[0m21:52:02.077624 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc
+[0m21:52:02.078689 [debug] [Thread-1 (]: Began running node test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb
+[0m21:52:02.079859 [info ] [Thread-1 (]: 33 of 33 START test unique_fact_ventas_id_detalle .............................. [RUN]
+[0m21:52:02.081178 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.canaza_bi.unique_dim_tipo_cpe_tipo_cpe_key.f7e92716cc, now test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb)
+[0m21:52:02.082100 [debug] [Thread-1 (]: Began compiling node test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb
+[0m21:52:02.087104 [debug] [Thread-1 (]: Writing injected SQL for node "test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb"
+[0m21:52:02.106486 [debug] [Thread-1 (]: Began executing node test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb
+[0m21:52:02.109668 [debug] [Thread-1 (]: Writing runtime sql for node "test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb"
+[0m21:52:02.121392 [debug] [Thread-1 (]: Using postgres connection "test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb"
+[0m21:52:02.122553 [debug] [Thread-1 (]: On test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "canaza_bi", "target_name": "dev", "node_id": "test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id_detalle as unique_field,
+    count(*) as n_records
+
+from "canaza_dw"."marts"."fact_ventas"
+where id_detalle is not null
+group by id_detalle
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:52:02.123706 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:52:02.136202 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m21:52:02.138358 [debug] [Thread-1 (]: On test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb: ROLLBACK
+[0m21:52:02.139434 [debug] [Thread-1 (]: On test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb: Close
+[0m21:52:02.140822 [info ] [Thread-1 (]: 33 of 33 PASS unique_fact_ventas_id_detalle .................................... [[32mPASS[0m in 0.06s]
+[0m21:52:02.142450 [debug] [Thread-1 (]: Finished running node test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb
+[0m21:52:02.145147 [debug] [MainThread]: On master: COMMIT
+[0m21:52:02.146130 [debug] [MainThread]: Using postgres connection "master"
+[0m21:52:02.147160 [debug] [MainThread]: On master: COMMIT
+[0m21:52:02.148288 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:52:02.157911 [debug] [MainThread]: SQL status: COMMIT in 0.010 seconds
+[0m21:52:02.159508 [debug] [MainThread]: On master: Close
+[0m21:52:02.160753 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:52:02.161695 [debug] [MainThread]: Connection 'test.canaza_bi.unique_fact_ventas_id_detalle.7fbeb250cb' was properly closed.
+[0m21:52:02.162916 [info ] [MainThread]: 
+[0m21:52:02.163855 [info ] [MainThread]: Finished running 33 data tests in 0 hours 0 minutes and 2.31 seconds (2.31s).
+[0m21:52:02.168332 [debug] [MainThread]: Command end result
+[0m21:52:02.227150 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/canaza_bi/target/manifest.json
+[0m21:52:02.233865 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/canaza_bi/target/semantic_manifest.json
+[0m21:52:02.247331 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/canaza_bi/target/run_results.json
+[0m21:52:02.248573 [info ] [MainThread]: 
+[0m21:52:02.249832 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:52:02.250793 [info ] [MainThread]: 
+[0m21:52:02.251731 [info ] [MainThread]: Done. PASS=33 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=33
+[0m21:52:02.253754 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 3.8643913, "process_in_blocks": "1232", "process_kernel_time": 0.86799, "process_mem_max_rss": "131860", "process_out_blocks": "0", "process_user_time": 3.659415}
+[0m21:52:02.255215 [debug] [MainThread]: Command `dbt test` succeeded at 21:52:02.255088 after 3.87 seconds
+[0m21:52:02.256187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034c1252910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034c12ffa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7034c12599d0>]}
+[0m21:52:02.257160 [debug] [MainThread]: Flushing usage events
+[0m21:52:03.012141 [debug] [MainThread]: An error was encountered while trying to flush usage events
