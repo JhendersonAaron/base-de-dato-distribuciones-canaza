@@ -1,0 +1,44 @@
+site_name: Canaza BI — Distribuciones Canaza E.I.R.L.
+site_description: Documentación del proyecto de Inteligencia de Negocios para Distribuciones Canaza
+site_author: Apaza Hilasaca Celia Patricia y Machaca Mamani Jhenderson Aaron
+repo_url: https://github.com/JhendersonAaron/base-de-dato-distribuciones-canaza
+repo_name: canaza-bi
+
+theme:
+  name: material
+  language: es
+  palette:
+    primary: indigo
+    accent: orange
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+
+nav:
+  - Inicio: index.md
+  - 1. OLTP MySQL:
+    - Descripción del OLTP: oltp/descripcion.md
+    - Cómo levantar el entorno: oltp/levantar.md
+    - Scripts SQL: oltp/scripts.md
+  - 2. Ingesta Airbyte:
+    - Instalación de Airbyte: airbyte/instalacion.md
+    - Configuración Source y Destination: airbyte/configuracion.md
+    - Sincronización: airbyte/sincronizacion.md
+  - 3. Transformación dbt:
+    - Estructura del proyecto: dbt/estructura.md
+    - Modelos staging: dbt/staging.md
+    - Modelos marts: dbt/marts.md
+    - Tests dbt: dbt/tests.md
+  - 4. DataMart:
+    - Modelo dimensional: datamart/modelo.md
+    - Dimensiones: datamart/dimensiones.md
+    - Tabla de hechos: datamart/hechos.md
+  - 5. Power BI:
+    - Conexión al DataMart: powerbi/conexion.md
+    - Modelo semántico: powerbi/modelo.md
+    - Medidas DAX: powerbi/medidas.md
+    - Dashboard y KPIs: powerbi/dashboard.md
+  - 6. Validación:
+    - SQL vs Power BI: validacion/sql_vs_pbi.md
+    - Tests de calidad: validacion/calidad.md

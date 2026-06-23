@@ -20,7 +20,7 @@ Precio Promedio Neto = DIVIDE([Ventas Netas], [Unidades Vendidas])
 ## Validación contra SQL
 
 SELECT ROUND(SUM(venta_neta)::numeric, 2) FROM marts.fact_ventas;
--- debe coincidir con [Ventas Netas] = 1,031,490.02
+-- debe coincidir con [Ventas Netas] = 1,369,313.54
 
 SELECT ROUND(SUM(margen_bruto)::numeric, 2) FROM marts.fact_ventas;
 -- debe coincidir con [Margen Bruto]
