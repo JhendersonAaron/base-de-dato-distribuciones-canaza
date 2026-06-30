@@ -2,12 +2,12 @@
 
 ## Conexiones con dimensiones
 
-| Clave foránea | Dimensión |
-|---------------|-----------|
-| fecha_key | dim_fecha |
-| entidad_key | dim_entidad |
-| producto_key | dim_producto |
-| tipo_cpe_key | dim_tipo_cpe |
+| Clave foránea | Dimensión   |
+| -------------- | ------------ |
+| fecha_key      | dim_fecha    |
+| entidad_key    | dim_entidad  |
+| producto_key   | dim_producto |
+| tipo_cpe_key   | dim_tipo_cpe |
 
 ## Validación
 

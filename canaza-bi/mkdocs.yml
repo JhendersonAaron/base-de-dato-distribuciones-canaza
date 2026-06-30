@@ -17,6 +17,10 @@ theme:
 
 nav:
   - Inicio: index.md
+  - Negocio:
+    - Problema y objetivo: negocio/problema.md
+    - KPIs principales: negocio/kpis.md
+    - Hallazgos y decisión: negocio/hallazgos.md
   - 1. OLTP MySQL:
     - Descripción del OLTP: oltp/descripcion.md
     - Cómo levantar el entorno: oltp/levantar.md
@@ -42,3 +46,4 @@ nav:
   - 6. Validación:
     - SQL vs Power BI: validacion/sql_vs_pbi.md
     - Tests de calidad: validacion/calidad.md
+  - Sustentación: sustentacion.md
