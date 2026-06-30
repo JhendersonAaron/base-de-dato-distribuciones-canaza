@@ -27,3 +27,6 @@
 - marts.dim_producto (1,660 filas)
 - marts.dim_tipo_cpe (4 filas)
 - marts.fact_ventas (1,523+ filas)
+
+Con las 5 tablas cargadas, el siguiente paso es construir el
+[modelo semántico](modelo.md) (relaciones, jerarquías y medidas DAX).

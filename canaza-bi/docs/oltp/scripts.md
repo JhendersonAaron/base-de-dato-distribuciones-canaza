@@ -31,3 +31,9 @@ SELECT COUNT(*) FROM fact_ventas;
 SELECT ROUND(SUM(venta_neta), 2) FROM fact_ventas;
 -- Resultado esperado: S/ 1,369,313.54
 ```
+
+Este DataMart manual (construido directamente en MySQL con SQL puro) es el
+mismo concepto que luego se automatizó con dbt en el pipeline principal
+MySQL → Airbyte → PostgreSQL. Sirvió como paso pedagógico para entender el
+modelo dimensional antes de implementarlo con dbt — ver
+[Modelo dimensional](../datamart/modelo.md) y [Modelos marts de dbt](../dbt/marts.md).

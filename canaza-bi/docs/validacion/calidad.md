@@ -23,3 +23,9 @@
 | Ventas netas | S/ 1,369,313.54  | S/ 1,369,313.54  | Sí |
 | Líneas de detalle | 1,523 | 1,523 | Sí |
 | Comprobantes | 1498 | 1498 | Sí |
+
+Estos dos hallazgos son el ejemplo más concreto, dentro del proyecto, de por
+qué validar tipos de datos y grano es indispensable en cualquier pipeline de
+ingesta entre tecnologías distintas — ver el detalle técnico completo en
+[Tests dbt](../dbt/tests.md) y la conciliación final contra Power BI en
+[SQL vs Power BI](sql_vs_pbi.md).

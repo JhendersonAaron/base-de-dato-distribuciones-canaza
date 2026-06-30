@@ -29,3 +29,6 @@
 
 - categoria, comprobante, comprobante_detalle
 - entidad, producto, tipo_comprobante, tipo_documento
+
+Con el Source y el Destination configurados, el siguiente paso es ejecutar la
+[sincronización](sincronizacion.md).
